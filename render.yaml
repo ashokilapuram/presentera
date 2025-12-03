@@ -1,4 +1,5 @@
 services:
+  # Backend API Service
   - type: web
     name: presentera-backend
     env: python
@@ -10,8 +11,28 @@ services:
     envVars:
       - key: PORT
         value: 10000
-      # Uncomment and set your frontend URL after deployment
+      # Set your frontend URL after deployment
       # - key: CORS_ORIGINS
-      #   value: https://your-frontend.vercel.app
+      #   value: https://presentera-frontend.onrender.com
     healthCheckPath: /health
 
+  # Frontend Static Site
+  - type: static
+    name: presentera-frontend
+    region: oregon  # Should match backend region for better performance
+    plan: free  # Options: free, starter, standard, pro
+    buildCommand: cd frontend && npm install && npm run build
+    staticPublishPath: frontend/build
+    envVars:
+      - key: REACT_APP_BACKEND_URL
+        # Update this after backend is deployed
+        value: https://presentera-backend.onrender.com
+    # SPA routing - all routes serve index.html
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
+    headers:
+      - path: /*
+        name: X-Robots-Tag
+        value: noindex
