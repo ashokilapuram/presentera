@@ -1,0 +1,611 @@
+/* Landing Page Styles - Completely Scoped to Prevent Conflicts */
+
+/* Main Landing Page Container - All styles scoped to this class */
+.landing-page {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen', 'Ubuntu', 'Cantarell', sans-serif;
+  line-height: 1.6;
+  color: #1a1a1a;
+  overflow-x: hidden;
+  scroll-behavior: smooth;
+  font-size: 16px;
+  box-sizing: border-box;
+  position: relative;
+  z-index: 1;
+  background: #ffffff;
+  min-height: 100vh;
+  width: 100%;
+}
+
+/* Hero Section */
+.landing-page .hero-section {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #ffffff;
+  padding: 0;
+  width: 100%;
+}
+
+.landing-page .hero-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.landing-page .hero-content {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 80px;
+  min-height: 80vh;
+  width: 100%;
+}
+
+.landing-page .hero-text {
+  flex: 1;
+  max-width: 500px;
+}
+
+.landing-page .logo-section {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  margin-bottom: 40px;
+  width: 100%;
+}
+
+.landing-page .logo-icon-image {
+  height: auto;
+  max-width: 48px;
+  width: auto;
+  display: block;
+}
+
+.landing-page .logo-name-image {
+  height: auto;
+  max-width: 180px;
+  width: auto;
+  display: block;
+}
+
+.landing-page .hero-title {
+  font-size: 64px;
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 0 0 24px 0;
+}
+
+.landing-page .title-bold {
+  color: #1a1a1a;
+  display: block;
+}
+
+.landing-page .title-gray {
+  color: #6b7280;
+  display: block;
+}
+
+.landing-page .hero-description {
+  font-size: 18px;
+  color: #6b7280;
+  margin: 0 0 40px 0;
+  line-height: 1.6;
+}
+
+.landing-page .hero-buttons {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+  justify-content: flex-start;
+  width: 100%;
+}
+
+.landing-page .btn-primary {
+  background: #1a1a1a;
+  color: white;
+  border: none;
+  padding: 16px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.landing-page .btn-primary:hover {
+  background: #2d2d2d;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.landing-page .btn-secondary {
+  background: white;
+  color: #1a1a1a;
+  border: 1px solid #e5e7eb;
+  padding: 16px 24px;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+.landing-page .btn-secondary:hover {
+  background: #f9fafb;
+  border-color: #d1d5db;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.landing-page .hero-image {
+  flex: 1;
+  max-width: 600px;
+}
+
+.landing-page .hero-image img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+/* Learn More Section */
+.landing-page .learn-more-section {
+  padding: 120px 0;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.landing-page .learn-more-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 24px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.landing-page .section-header {
+  text-align: center;
+  margin-bottom: 80px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.landing-page .section-title {
+  font-size: 48px;
+  font-weight: 700;
+  color: #1a1a1a;
+  margin: 0 0 16px 0;
+  text-align: center;
+}
+
+.landing-page .section-subtitle {
+  font-size: 18px;
+  color: #6b7280;
+  margin: 0;
+  max-width: 600px;
+  text-align: center;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.landing-page .learn-more-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.landing-page .app-mockup {
+  width: 100%;
+  max-width: 800px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.landing-page .app-mockup img {
+  width: 100%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 32px 64px -12px rgba(0, 0, 0, 0.25);
+  transform: perspective(1000px) rotateY(-3deg) rotateX(3deg);
+  transition: all 0.4s ease;
+}
+
+.landing-page .app-mockup:hover img {
+  transform: perspective(1000px) rotateY(0deg) rotateX(0deg) scale(1.02);
+  box-shadow: 0 40px 80px -12px rgba(0, 0, 0, 0.3);
+}
+
+.landing-page .features-list {
+  width: 100%;
+  max-width: 1000px;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 24px;
+  justify-content: center;
+}
+
+.landing-page .feature-card {
+  background: white;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  padding: 32px 24px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.landing-page .feature-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(90deg, #1a1a1a, #4a5568);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.landing-page .feature-card:hover::before {
+  transform: scaleX(1);
+}
+
+.landing-page .feature-card:hover {
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  border-color: #d1d5db;
+}
+
+.landing-page .feature-icon {
+  width: 48px;
+  height: 48px;
+  background: #1a1a1a;
+  border-radius: 12px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  margin-bottom: 20px;
+  transition: all 0.3s ease;
+}
+
+.landing-page .feature-card:hover .feature-icon {
+  background: #2d3748;
+  transform: scale(1.1);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.landing-page .feature-title {
+  font-size: 20px;
+  font-weight: 600;
+  color: #1a1a1a;
+  margin: 0 0 8px 0;
+  transition: color 0.3s ease;
+}
+
+.landing-page .feature-card:hover .feature-title {
+  color: #2d3748;
+}
+
+.landing-page .feature-description {
+  font-size: 16px;
+  color: #6b7280;
+  margin: 0;
+  line-height: 1.5;
+  transition: color 0.3s ease;
+}
+
+.landing-page .feature-card:hover .feature-description {
+  color: #4a5568;
+}
+
+
+
+
+/* Responsive Design - All scoped to landing page */
+@media (max-width: 1200px) {
+  .landing-page .learn-more-content {
+    gap: 50px;
+    max-width: 1000px;
+  }
+  
+  .landing-page .app-mockup {
+    max-width: 700px;
+  }
+  
+  .landing-page .features-list {
+    max-width: 800px;
+  }
+}
+
+@media (max-width: 1023px) {
+  .landing-page .hero-section {
+    padding-top: 60px;
+  }
+  
+  .landing-page .hero-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 60px;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
+  
+  .landing-page .hero-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  .landing-page .logo-section {
+    justify-content: center;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+  }
+  
+  .landing-page .logo-icon-image {
+    max-width: 40px;
+  }
+  
+  .landing-page .logo-name-image {
+    max-width: 140px;
+  }
+  
+  .landing-page .hero-title {
+    font-size: 48px;
+    text-align: center;
+    width: 100%;
+  }
+  
+  .landing-page .hero-description {
+    text-align: center;
+    width: 100%;
+  }
+  
+  .landing-page .hero-buttons {
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    display: flex;
+    gap: 16px;
+  }
+  
+  .landing-page .btn-primary,
+  .landing-page .btn-secondary {
+    flex: 1;
+    max-width: 200px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+  }
+  
+  .landing-page .learn-more-content {
+    flex-direction: column;
+    gap: 60px;
+    align-items: center;
+    text-align: center;
+    max-width: 800px;
+    width: 100%;
+  }
+  
+  .landing-page .app-mockup {
+    max-width: 500px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  
+}
+
+@media (max-width: 768px) {
+  .landing-page .hero-content {
+    gap: 40px;
+    padding: 20px 0;
+  }
+  
+  .landing-page .hero-title {
+    font-size: 36px;
+    line-height: 1.2;
+    text-align: center;
+  }
+  
+  .landing-page .hero-description {
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  .landing-page .section-title {
+    font-size: 36px;
+    text-align: center;
+  }
+  
+  .landing-page .section-subtitle {
+    font-size: 16px;
+    text-align: center;
+  }
+  
+  
+  .landing-page .hero-buttons {
+    flex-direction: column;
+    width: 100%;
+    gap: 12px;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .landing-page .btn-primary,
+  .landing-page .btn-secondary {
+    width: 100%;
+    max-width: 300px;
+    justify-content: center;
+    padding: 14px 20px;
+  }
+  
+  .landing-page .learn-more-section {
+    padding: 80px 0;
+    min-height: auto;
+  }
+  
+  .landing-page .section-header {
+    margin-bottom: 60px;
+    text-align: center;
+  }
+  
+  .landing-page .learn-more-content {
+    max-width: 600px;
+    gap: 40px;
+  }
+  
+  .landing-page .features-list {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    max-width: 100%;
+  }
+  
+  .landing-page .feature-card {
+    padding: 24px 20px;
+    margin: 0 10px;
+  }
+  
+  .landing-page .feature-card:hover {
+  }
+  
+  .landing-page .app-mockup {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .landing-page .app-mockup img {
+    transform: none;
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .landing-page .hero-container,
+  .landing-page .learn-more-container {
+    padding: 0 16px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .landing-page .hero-section {
+    padding: 40px 0;
+    min-height: 90vh;
+  }
+  
+  .landing-page .hero-content {
+    gap: 30px;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .landing-page .hero-image {
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+  
+  .landing-page .hero-title {
+    font-size: 28px;
+    text-align: center;
+  }
+  
+  .landing-page .hero-description {
+    font-size: 14px;
+    margin-bottom: 30px;
+    text-align: center;
+  }
+  
+  .landing-page .section-title {
+    font-size: 28px;
+    text-align: center;
+  }
+  
+  .landing-page .section-subtitle {
+    font-size: 14px;
+    text-align: center;
+  }
+  
+  .landing-page .learn-more-section {
+    padding: 60px 0;
+  }
+  
+  .landing-page .learn-more-content {
+    max-width: 400px;
+    gap: 30px;
+  }
+  
+  
+  
+  .landing-page .btn-primary,
+  .landing-page .btn-secondary {
+    max-width: 280px;
+    padding: 12px 16px;
+  }
+}
+
+@media (max-width: 360px) {
+  .landing-page .hero-title {
+    font-size: 24px;
+    text-align: center;
+  }
+  
+  .landing-page .section-title {
+    font-size: 24px;
+    text-align: center;
+  }
+  
+  .landing-page .btn-primary,
+  .landing-page .btn-secondary {
+    padding: 12px 16px;
+    font-size: 14px;
+    max-width: 260px;
+  }
+  
+  .landing-page .learn-more-content {
+    max-width: 320px;
+  }
+}

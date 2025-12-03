@@ -1,0 +1,126 @@
+.modern-color-picker {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  position: relative;
+}
+
+.mcp-header {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: #222;
+  font-weight: 500;
+}
+
+.mcp-swatches {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 5px;
+}
+
+.mcp-swatch {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: transform 0.15s, box-shadow 0.15s;
+  position: relative;
+}
+
+.mcp-swatch:hover {
+  transform: scale(1.1);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.mcp-swatch.active {
+  box-shadow: 0 0 0 2px #3b82f6, 0 0 0 4px rgba(59, 130, 246, 0.3);
+  transform: scale(1.05);
+}
+
+.mcp-custom-btn {
+  background: #18181b;
+  color: white;
+  border: none;
+  padding: 3px 6px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 28px;
+  height: 20px;
+}
+
+.mcp-custom-btn:hover {
+  background: #2a2a2d;
+}
+
+.mcp-picker-popup {
+  position: fixed;
+  background: #1f1f1f;
+  padding: 10px;
+  border-radius: 10px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.3);
+  z-index: 999999 !important;
+  transition: opacity 0.15s ease, transform 0.15s ease;
+}
+
+/* react-colorful styles override */
+.mcp-picker-popup .react-colorful {
+  width: 200px;
+  height: 200px;
+  position: relative;
+}
+
+.mcp-picker-popup .react-colorful__saturation {
+  border-radius: 6px 6px 0 0;
+  width: 200px !important;
+}
+
+.mcp-picker-popup .react-colorful__hue {
+  border-radius: 0 0 0 6px;
+  width: 160px !important;
+  margin: 0 !important;
+  float: left;
+  height: 18px !important;
+}
+
+.mcp-picker-wrapper {
+  position: relative;
+  width: 200px;
+  display: inline-block;
+}
+
+.mcp-dropper-btn {
+  background: #18181b;
+  color: white;
+  border: none;
+  padding: 0 2px;
+  border-radius: 0 0 6px 0;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+  width: 40px;
+  height: 18px;
+  min-width: 40px;
+  position: absolute;
+  left: 160px;
+  bottom: 0;
+  z-index: 10;
+}
+
+.mcp-dropper-btn:hover {
+  background: #2a2a2d;
+}
+
+.mcp-dropper-btn:active {
+  background: #3a3a3d;
+}
+

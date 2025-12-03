@@ -1,0 +1,1607 @@
+/* Toolbar component styles colocated; core rules still in global CSS to avoid UI changes */
+
+/* Format Container Styling */
+.format-container {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  padding: var(--space-2) 0.5rem;
+  background: #e5e7eb;
+  border-radius: 6px;
+  height: fit-content;
+  flex-shrink: 0;
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+}
+
+/* Reduce button sizes inside format-container */
+.format-container .toolbar-button {
+  min-width: 24px;
+  height: 24px;
+  padding: 0.15rem 0.2rem;
+  font-size: 0.75rem;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-weight: 600;
+}
+
+.format-container .toolbar-button svg {
+  width: 14px;
+  height: 14px;
+  stroke: #000000;
+  color: #000000;
+  display: block;
+}
+
+/* SVG Styling for Toolbar Buttons */
+.toolbar-button svg {
+  stroke: #000000;
+  color: #000000;
+  display: block;
+}
+
+/* Reduce dropdown sizes inside format-container */
+.format-container .dropdown-trigger {
+  padding: 0.25rem 0.45rem;
+  font-size: 0.75rem;
+  min-width: 75px;
+  height: 24px;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  font-weight: 600;
+}
+
+/* Text spacing button - match width of other buttons */
+.format-container .text-spacing-btn {
+  min-width: 24px !important;
+  padding: 0.15rem 0.2rem !important;
+}
+
+/* Reduce separator size inside format-container */
+.format-container .formatting-separator {
+  font-size: 0.7rem;
+  margin: 0 0.2rem;
+}
+
+/* Font Color Button - New Design */
+.format-container .font-color-btn {
+  appearance: none;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: #18181b;
+  color: #fafafa;
+  border-radius: 6px;
+  padding: 2px 4px;
+  width: 32px;
+  height: 24px;
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1px;
+  cursor: pointer;
+  transition: transform 0.12s ease, background 0.12s ease, box-shadow 0.12s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.02);
+  user-select: none;
+  overflow: visible;
+}
+
+.format-container .font-color-btn:hover {
+  background: #1f1f25;
+  transform: translateY(-1px);
+}
+
+.format-container .font-color-btn:active {
+  background: #141419;
+  transform: translateY(0);
+}
+
+.format-container .font-color-btn__label {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1;
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    Ubuntu, Cantarell, Noto Sans, Arial;
+  display: block;
+  flex-shrink: 0;
+}
+
+.format-container .font-color-btn__swatch {
+  width: 100%;
+  height: 5px;
+  border-radius: 999px;
+  background: linear-gradient(90deg,
+      #8b5cf6 0%,
+      #4f46e5 16%,
+      #3b82f6 32%,
+      #10b981 48%,
+      #facc15 64%,
+      #f59e0b 80%,
+      #ef4444 100%);
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.15),
+    0 1px 2px rgba(0, 0, 0, 0.35);
+  display: block;
+  flex-shrink: 0;
+}
+
+/* Reduce color button size inside format-container */
+.format-container .color-button-container .toolbar-button {
+  height: 24px;
+  min-width: 24px;
+  padding: 0.15rem 0.2rem;
+}
+
+.format-container .color-button-container .toolbar-button span {
+  font-size: 9px;
+}
+
+/* Font Size Controls */
+.font-size-controls {
+  display: flex;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.font-size-btn {
+  min-width: 22px !important;
+  height: 24px !important;
+  padding: 0 !important;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1;
+}
+
+.font-size-display {
+  min-width: 28px;
+  text-align: center;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #374151;
+  padding: 0 0.2rem;
+}
+
+/* Increase icon visibility for Bold, Italic, Underline, and Alignment buttons */
+.format-container .toolbar-button svg {
+  stroke-width: 2.5;
+  font-weight: bold;
+}
+
+.format-container .toolbar-button:hover svg {
+  stroke-width: 3;
+}
+
+.format-container .toolbar-button.active svg {
+  stroke-width: 3;
+  color: #ffffff !important;
+  stroke: #ffffff !important;
+}
+
+/* Ensure format-container fits properly without affecting toolbar-top */
+.toolbar-actions {
+  align-items: center;
+}
+
+.toolbar-top {
+  overflow: visible;
+}
+
+/* Toolbar Bottom Improvements */
+.toolbar-formatting {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+}
+
+.formatting-separator {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #9ca3af;
+  font-weight: 300;
+  font-size: 0.875rem;
+  margin: 0 0.5rem;
+  user-select: none;
+  pointer-events: none;
+  height: 100%;
+  line-height: 1;
+}
+
+.color-button-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.color-button {
+  position: relative;
+  background: #e2e8f0;
+  border: 1px solid #94a3b8;
+  color: #1f2937;
+  font-weight: 800;
+  font-size: 14px;
+  min-width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.color-button:hover {
+  background: #cbd5e1;
+  border-color: #64748b;
+  transform: translateY(-1px);
+}
+
+.formatting-button {
+  background: #e2e8f0;
+  border: 1px solid #94a3b8;
+  color: #1f2937;
+  font-weight: 700;
+}
+
+.formatting-button:hover {
+  background: #cbd5e1;
+  border-color: #64748b;
+}
+
+.formatting-button.active {
+  background: #3b82f6;
+  border-color: #2563eb;
+  color: #ffffff;
+  font-weight: 700;
+}
+
+.formatting-button.active svg {
+  color: #ffffff !important;
+  stroke: #ffffff !important;
+}
+
+/* Bold, Italic, Underline specific styling - Make them sharp and consistent */
+.formatting-button:has(.fi-bold),
+.formatting-button:has(.fi-italic),
+.formatting-button:has(.fi-underline) {
+  font-weight: 600;
+  color: #374151;
+}
+
+.formatting-button:has(.fi-bold):hover,
+.formatting-button:has(.fi-italic):hover,
+.formatting-button:has(.fi-underline):hover {
+  color: #1f2937;
+}
+
+.formatting-button:has(.fi-bold).active,
+.formatting-button:has(.fi-italic).active,
+.formatting-button:has(.fi-underline).active {
+  color: #ffffff;
+}
+
+.formatting-button:has(.fi-bold).active svg,
+.formatting-button:has(.fi-italic).active svg,
+.formatting-button:has(.fi-underline).active svg {
+  color: #ffffff !important;
+  stroke: #ffffff !important;
+}
+
+/* Make all formatting icons sharp and consistent with RightToolbar */
+.toolbar-button svg {
+  color: #000000;
+  font-weight: 900;
+  stroke-width: 2;
+}
+
+.toolbar-button:hover svg {
+  color: #000000;
+  stroke-width: 2.5;
+}
+
+.toolbar-button.active svg {
+  color: #ffffff !important;
+  stroke: #ffffff !important;
+  stroke-width: 2.5;
+}
+
+/* Primary buttons (like Slideshow) should have white icons */
+.toolbar-button.primary svg {
+  color: #ffffff !important;
+  stroke: #ffffff !important;
+}
+
+.toolbar-button.primary:hover svg {
+  color: #ffffff !important;
+  stroke: #ffffff !important;
+}
+
+.color-picker {
+  position: absolute;
+  opacity: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+/* Font color button to match other toolbar buttons exactly */
+.color-button-container .toolbar-button {
+  height: 32px;
+  min-width: 32px;
+  padding: var(--space-2) var(--space-4);
+}
+
+.color-button-container .toolbar-button span {
+  font-size: 12px;
+}
+
+/* Responsive format-container for medium screens (1024px - 1364px) */
+@media (min-width: 1024px) and (max-width: 1364px) {
+  .toolbar-logo-icon {
+    height: 22px;
+    max-width: 22px;
+  }
+
+  .toolbar-logo-name {
+    height: 18px;
+    max-width: 150px;
+  }
+
+  .format-container {
+    gap: 0.3rem;
+    padding: var(--space-2) 0.45rem;
+  }
+
+  .format-container .toolbar-button {
+    min-width: 22px;
+    height: 22px;
+    padding: 0.1rem 0.15rem;
+    font-size: 0.7rem;
+  }
+
+  .format-container .toolbar-button svg {
+    width: 13px;
+    height: 13px;
+  }
+
+  .format-container .dropdown-trigger {
+    padding: 0.2rem 0.4rem;
+    font-size: 0.7rem;
+    min-width: 70px;
+    height: 22px;
+  }
+
+  .format-container .formatting-separator {
+    font-size: 0.65rem;
+    margin: 0 0.2rem;
+  }
+
+  .format-container .color-button-container .toolbar-button {
+    height: 22px;
+    min-width: 22px;
+    padding: 0.1rem 0.15rem;
+  }
+
+  .format-container .color-button-container .toolbar-button span {
+    font-size: 8px;
+  }
+
+  .font-size-btn {
+    min-width: 20px !important;
+    height: 22px !important;
+    font-size: 0.9rem;
+  }
+
+  .font-size-display {
+    min-width: 24px;
+    font-size: 0.7rem;
+  }
+
+  .format-container .font-color-btn {
+    width: 30px;
+    height: 22px;
+    padding: 2px 3px;
+    gap: 1px;
+    border-radius: 6px;
+  }
+
+  .format-container .font-color-btn__label {
+    font-size: 11px;
+  }
+
+  .format-container .font-color-btn__swatch {
+    width: 100%;
+    height: 4px;
+  }
+}
+
+/* Keep small size for medium screens (1024px - 1364px) */
+@media (min-width: 1024px) and (max-width: 1364px) {
+  .toolbar-formatting {
+    gap: 0.5rem;
+    padding: 0.4rem 0.6rem;
+  }
+
+  .formatting-separator {
+    font-size: 0.8rem;
+    margin: 0 0.4rem;
+  }
+
+  .formatting-button {
+    min-width: 22px;
+    height: 22px;
+    font-size: 9px;
+    flex-shrink: 0;
+  }
+
+  .color-button-container .toolbar-button {
+    height: 22px;
+    min-width: 22px;
+    padding: 0.2rem 0.4rem;
+  }
+
+  .color-button-container .toolbar-button span {
+    font-size: 9px;
+  }
+}
+
+/* Control button sizes for screens 1150px - 1250px */
+@media (min-width: 1150px) and (max-width: 1250px) {
+  .toolbar-actions .toolbar-button {
+    padding: var(--space-1) var(--space-2);
+    font-size: 0.75rem;
+  }
+
+  .toolbar-actions .toolbar-button.dropdown-trigger {
+    padding: var(--space-1) var(--space-2);
+  }
+
+  .formatting-separator {
+    font-size: 0.7rem;
+    margin: 0 0.3rem;
+  }
+
+  .format-container {
+    padding: 0.2rem 0.5rem;
+  }
+}
+
+/* Control button sizes for screens 1250px - 1400px */
+@media (min-width: 1250px) and (max-width: 1400px) {
+  .toolbar-actions .toolbar-button {
+    padding: var(--space-2) var(--space-3);
+    font-size: 0.8rem;
+  }
+
+  .toolbar-actions .toolbar-button.dropdown-trigger {
+    padding: var(--space-2) var(--space-3);
+  }
+
+  .formatting-separator {
+    font-size: 0.75rem;
+    margin: 0 0.4rem;
+  }
+
+  .format-container {
+    padding: 0.25rem 0.5rem;
+  }
+
+  .color-button {
+    min-width: 22px;
+    height: 22px;
+    font-size: 9px;
+    flex-shrink: 0;
+  }
+
+  .formatting-select {
+    min-width: 80px;
+    max-width: 90px;
+    padding: 0.2rem 0.3rem;
+    font-size: 10px;
+    flex-shrink: 0;
+  }
+
+  .color-button-container .toolbar-button {
+    height: 22px;
+    min-width: 22px;
+    padding: 0.2rem 0.4rem;
+  }
+
+  .color-button-container .toolbar-button span {
+    font-size: 9px;
+  }
+
+  .format-container .font-color-btn {
+    width: 31px;
+    height: 24px;
+    padding: 2px 4px;
+    gap: 1px;
+    border-radius: 6px;
+  }
+
+  .format-container .font-color-btn__label {
+    font-size: 12px;
+  }
+
+  .format-container .font-color-btn__swatch {
+    width: 100%;
+    height: 5px;
+  }
+}
+
+/* Large screen spacing improvements - includes 1365px */
+@media (min-width: 1365px) {
+  .toolbar-logo-icon {
+    height: 24px;
+    max-width: 24px;
+  }
+
+  .toolbar-logo-name {
+    height: 20px;
+    max-width: 180px;
+  }
+
+  .format-container {
+    gap: 0.4rem;
+    padding: 0.25rem 0.6rem;
+  }
+
+  .format-container .toolbar-button {
+    min-width: 26px;
+    height: 26px;
+    padding: 0.2rem 0.25rem;
+    font-size: 0.8rem;
+  }
+
+  .format-container .toolbar-button svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .format-container .dropdown-trigger {
+    padding: 0.3rem 0.5rem;
+    font-size: 0.8rem;
+    min-width: 85px;
+    height: 26px;
+  }
+
+  .format-container .formatting-separator {
+    font-size: 0.75rem;
+    margin: 0 0.25rem;
+  }
+
+  .font-size-btn {
+    min-width: 24px !important;
+    height: 26px !important;
+    font-size: 1.1rem;
+  }
+
+  .font-size-display {
+    min-width: 30px;
+    font-size: 0.8rem;
+  }
+
+  .format-container .font-color-btn {
+    width: 32px;
+    height: 26px;
+    padding: 2.5px 4.5px;
+    gap: 1px;
+    border-radius: 6px;
+  }
+
+  .format-container .font-color-btn__label {
+    font-size: 13px;
+  }
+
+  .format-container .font-color-btn__swatch {
+    width: 100%;
+    height: 5px;
+  }
+
+  .toolbar-formatting {
+    gap: 1rem;
+    padding: 1rem 2rem;
+  }
+
+  .formatting-separator {
+    font-size: 1rem;
+    margin: 0 0.6rem;
+  }
+}
+
+/* Ensure toolbar bottom never overflows its container */
+.toolbar-formatting {
+  max-width: 100%;
+  box-sizing: border-box;
+  display: flex;
+  align-items: center;
+  overflow: visible;
+}
+
+.toolbar-formatting * {
+  box-sizing: border-box;
+}
+
+/* Responsive toolbar actions for smaller screens */
+@media (max-width: 1023px) {
+  .formatting-separator {
+    font-size: 0.7rem;
+    margin: 0 0.35rem;
+  }
+}
+
+@media (max-width: 900px) {
+  .formatting-separator {
+    font-size: 0.65rem;
+    margin: 0 0.3rem;
+  }
+}
+
+@media (max-width: 800px) {
+  .formatting-separator {
+    font-size: 0.6rem;
+    margin: 0 0.25rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .toolbar-logo-icon {
+    height: 18px;
+    max-width: 18px;
+  }
+
+  .toolbar-logo-name {
+    height: 14px;
+    max-width: 120px;
+  }
+
+  .formatting-separator {
+    font-size: 0.55rem;
+    margin: 0 0.2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .toolbar-logo-icon {
+    height: 16px;
+    max-width: 16px;
+  }
+
+  .toolbar-logo-name {
+    height: 12px;
+    max-width: 100px;
+  }
+
+  .formatting-separator {
+    font-size: 0.5rem;
+    margin: 0 0.15rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .toolbar-logo-icon {
+    height: 14px;
+    max-width: 14px;
+  }
+
+  .toolbar-logo-name {
+    height: 11px;
+    max-width: 80px;
+  }
+
+  .formatting-separator {
+    font-size: 0.45rem;
+    margin: 0 0.1rem;
+  }
+}
+
+@media (max-width: 360px) {
+  .toolbar-logo-icon {
+    height: 12px;
+    max-width: 12px;
+  }
+
+  .toolbar-logo-name {
+    height: 10px;
+    max-width: 70px;
+  }
+
+  .formatting-separator {
+    font-size: 0.4rem;
+    margin: 0 0.08rem;
+  }
+}
+
+/* Fix logo sizes specifically for 1023px screen */
+@media (min-width: 1023px) and (max-width: 1023px) {
+  .toolbar-logo-icon {
+    height: 18px;
+    max-width: 18px;
+    width: auto;
+    display: block;
+    flex-shrink: 0;
+    object-fit: contain;
+  }
+
+  .toolbar-logo-name {
+    height: 14px;
+    max-width: 120px;
+    width: auto;
+    display: block;
+    flex-shrink: 0;
+    object-fit: contain;
+  }
+}
+
+/* Tablet and medium screens: keep toolbar-top on one line and avoid collapse */
+/* MOBILE/TABLET: 1px → 1023px */
+@media (max-width: 1024px) {
+  .toolbar-logo-icon {
+    height: 20px;
+    max-width: 20px;
+  }
+
+  .toolbar-logo-name {
+    height: 16px;
+    max-width: 130px;
+  }
+
+  .format-container {
+    gap: 0.25rem;
+    padding: 0.2rem 0.35rem;
+  }
+
+  .format-container .toolbar-button {
+    min-width: 20px;
+    height: 20px;
+    padding: 0.1rem 0.15rem;
+    font-size: 0.65rem;
+  }
+
+  .format-container .toolbar-button svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  .format-container .dropdown-trigger {
+    padding: 0.15rem 0.3rem;
+    font-size: 0.65rem;
+    min-width: 60px;
+    height: 20px;
+  }
+
+  .format-container .formatting-separator {
+    font-size: 0.6rem;
+    margin: 0 0.15rem;
+  }
+
+  .format-container .color-button-container .toolbar-button {
+    height: 20px;
+    min-width: 20px;
+    padding: 0.1rem 0.15rem;
+  }
+
+  .format-container .color-button-container .toolbar-button span {
+    font-size: 7px;
+  }
+
+  .font-size-btn {
+    min-width: 18px !important;
+    height: 20px !important;
+    font-size: 0.8rem;
+  }
+
+  .font-size-display {
+    min-width: 22px;
+    font-size: 0.65rem;
+  }
+
+  .format-container .font-color-btn {
+    width: 28px;
+    height: 20px;
+    padding: 1.5px 3px;
+    gap: 1px;
+    border-radius: 6px;
+  }
+
+  .format-container .font-color-btn__label {
+    font-size: 10px;
+  }
+
+  .format-container .font-color-btn__swatch {
+    width: 100%;
+    height: 4px;
+  }
+
+  .toolbar-top {
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 0.75rem;
+    /* slightly tighter */
+  }
+
+  .toolbar-logo-icon {
+    height: 16px;
+    max-width: 16px;
+  }
+
+  .toolbar-logo-name {
+    height: 12px;
+    max-width: 100px;
+  }
+
+  .toolbar-logo {
+    font-size: 1.25rem;
+    /* shrink a touch */
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  .toolbar-logo-icon {
+    height: 22px;
+    width: auto;
+    max-width: 22px;
+    display: block;
+    flex-shrink: 0;
+    object-fit: contain;
+  }
+
+  .toolbar-logo-name {
+    height: 18px;
+    width: auto;
+    max-width: 150px;
+    display: block;
+    flex-shrink: 0;
+    object-fit: contain;
+  }
+
+  .toolbar-tabs {
+    max-width: 55vw;
+    /* leave room for actions */
+    overflow-x: auto;
+    overflow-y: hidden;
+    white-space: nowrap;
+    gap: 0.25rem;
+    padding: 0.25rem;
+    /* reduce inner padding */
+  }
+
+  .toolbar-tabs::-webkit-scrollbar {
+    height: 6px;
+  }
+
+  .toolbar-tabs::-webkit-scrollbar-thumb {
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 3px;
+  }
+
+  .toolbar-tab {
+    padding: 0.4rem 0.6rem;
+    /* smaller tab pill */
+    font-size: 0.8rem;
+    flex: 0 0 auto;
+    /* prevent shrinking/wrapping */
+  }
+
+  .toolbar-actions {
+    margin-left: auto;
+    gap: 0.4rem;
+    flex-shrink: 0;
+  }
+
+  .toolbar-actions .toolbar-button {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  .format-container {
+    padding: 0.25rem 0.35rem;
+  }
+}
+
+/* Text Modal Styles */
+.text-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: modalFadeIn 0.3s ease-out;
+}
+
+.text-modal {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  max-width: 500px;
+  width: 90%;
+  max-height: 80vh;
+  overflow: hidden;
+  animation: modalSlideIn 0.3s ease-out;
+  position: relative;
+  margin: auto;
+}
+
+.text-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  border-bottom: 1px solid #e5e7eb;
+  background: #f9fafb;
+}
+
+.text-modal-header h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.text-modal-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #6b7280;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.text-modal-close:hover {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.text-modal-content {
+  padding: 24px;
+}
+
+.text-options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.text-option {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+}
+
+.text-option:hover {
+  border-color: #0ea5e9;
+  background: #f0f9ff;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(14, 165, 233, 0.15);
+}
+
+.text-option-icon {
+  width: 48px;
+  height: 48px;
+  background: #0ea5e9;
+  color: white;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.text-option-content h4 {
+  margin: 0 0 4px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.text-option-content p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #6b7280;
+  line-height: 1.4;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .text-modal {
+    background: #1f2937;
+    color: #f9fafb;
+  }
+
+  .text-modal-header {
+    background: #111827;
+    border-bottom-color: #374151;
+  }
+
+  .text-modal-header h3 {
+    color: #f9fafb;
+  }
+
+  .text-modal-close {
+    color: #9ca3af;
+  }
+
+  .text-modal-close:hover {
+    background: #374151;
+    color: #f9fafb;
+  }
+
+  .text-option {
+    background: #1f2937;
+    border-color: #374151;
+  }
+
+  .text-option:hover {
+    background: #0f172a;
+    border-color: #0ea5e9;
+  }
+
+  .text-option-content h4 {
+    color: #f9fafb;
+  }
+
+  .text-option-content p {
+    color: #9ca3af;
+  }
+}
+
+/* Zoom Controls */
+.zoom-controls {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 8px;
+}
+
+.zoom-separator {
+  width: 1px;
+  height: 24px;
+  background: rgba(255, 255, 255, 0.2);
+  margin-right: 4px;
+}
+
+.zoom-button {
+  width: 32px;
+  height: 32px;
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 6px;
+  color: #475569;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s ease;
+  backdrop-filter: blur(10px);
+}
+
+.zoom-button:hover {
+  background: rgba(255, 255, 255, 0.2);
+  border-color: rgba(255, 255, 255, 0.3);
+  color: #1f2937;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.zoom-button:active {
+  transform: translateY(0);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.zoom-percentage {
+  font-size: 14px;
+  font-weight: 500;
+  color: #475569;
+  min-width: 40px;
+  text-align: center;
+  font-family: 'JetBrains Mono', 'Fira Code', monospace;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 6px 8px;
+  border-radius: 4px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Dark mode zoom controls */
+body.dark .zoom-separator {
+  background: rgba(255, 255, 255, 0.1);
+}
+
+body.dark .zoom-button {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  color: #e5e7eb;
+}
+
+body.dark .zoom-button:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.2);
+  color: #f9fafb;
+}
+
+body.dark .zoom-percentage {
+  color: #e5e7eb;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+/* Pan Mode Button */
+.toolbar-button.active {
+  background-color: #000000 !important;
+  color: white !important;
+  border-color: #000000 !important;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4) !important;
+}
+
+body.dark .toolbar-button.active {
+  background-color: #000000 !important;
+  color: white !important;
+  border-color: #000000 !important;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.6) !important;
+}
+
+/* -----------------------------------------------------------
+   Smooth desktop-only styling (applies only on ≥1024px)
+   ----------------------------------------------------------- */
+@media (min-width: 1024px) {
+
+  .formatting-button,
+  .color-button,
+  .formatting-select {
+    transition: all 0.25s ease-in-out;
+    will-change: transform, background, color;
+  }
+
+  .formatting-button:hover,
+  .color-button:hover {
+    background: #cbd5e1;
+    border-color: #64748b;
+    transform: translateY(-1px) scale(1.03);
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+  }
+
+  .formatting-button.active {
+    background: #111827 !important;
+    color: #fff !important;
+    border-color: #000 !important;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.25);
+  }
+
+  .formatting-button.active svg {
+    color: #ffffff !important;
+    stroke: #ffffff !important;
+  }
+
+}
+
+/* -----------------------------------------------------------
+   Custom Dropdown Styling (desktop only)
+   ----------------------------------------------------------- */
+@media (min-width: 1024px) {
+
+  /* Ensure toolbar-bottom allows dropdown overflow */
+  .toolbar-bottom {
+    overflow: visible !important;
+    z-index: 10002;
+  }
+
+  .custom-dropdown {
+    position: relative;
+    display: inline-block;
+    z-index: 10000;
+  }
+
+  .dropdown-trigger {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    background: #ffffff;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    padding: 0.4rem 0.75rem;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: #111827;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  }
+
+  .dropdown-trigger:hover {
+    border-color: #9ca3af;
+    background-color: #f9fafb;
+  }
+
+  .dropdown-trigger:focus {
+    outline: none;
+    border-color: #111827;
+    box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+  }
+
+  .dropdown-menu {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    background: #ffffff;
+    border: 1px solid #d1d5db;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+    backdrop-filter: blur(8px);
+    z-index: 10001;
+    margin-top: 4px;
+    max-height: 200px;
+    overflow-y: auto;
+  }
+
+  /* Stylish scrollbar for desktop dropdown menus */
+  .dropdown-menu::-webkit-scrollbar {
+    width: 6px;
+  }
+
+  .dropdown-menu::-webkit-scrollbar-track {
+    background: #f1f5f9;
+    border-radius: 3px;
+  }
+
+  .dropdown-menu::-webkit-scrollbar-thumb {
+    background: #cbd5e1;
+    border-radius: 3px;
+    transition: background 0.2s ease;
+  }
+
+  .dropdown-menu::-webkit-scrollbar-thumb:hover {
+    background: #94a3b8;
+  }
+
+  /* Firefox scrollbar styling for desktop */
+  .dropdown-menu {
+    scrollbar-width: thin;
+    scrollbar-color: #cbd5e1 #f1f5f9;
+  }
+
+  .dropdown-item {
+    padding: 0.4rem 0.75rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    border-radius: 6px;
+    margin: 1px;
+    font-size: 0.85rem;
+    font-weight: 500;
+    line-height: 1.2;
+  }
+
+  .dropdown-item:hover {
+    background-color: #000000 !important;
+    color: white !important;
+  }
+
+  .dropdown-item:first-child {
+    margin-top: 2px;
+  }
+
+  .dropdown-item:last-child {
+    margin-bottom: 2px;
+  }
+}
+
+/* Apply dropdown styling to all screen sizes */
+.custom-dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-trigger {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  padding: 0.4rem 0.75rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #111827;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.04);
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* Responsive font family dropdown width */
+@media (max-width: 1365px) {
+  .dropdown-trigger {
+    min-width: 100px;
+    max-width: 120px;
+  }
+}
+
+@media (min-width: 1365px) {
+  .dropdown-trigger {
+    min-width: 120px;
+    max-width: 150px;
+  }
+}
+
+.dropdown-trigger:hover {
+  border-color: #9ca3af;
+  background-color: #f9fafb;
+}
+
+.dropdown-trigger:focus {
+  outline: none;
+  border-color: #111827;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+.dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background: #ffffff;
+  border: 1px solid #d1d5db;
+  border-radius: 10px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(8px);
+  margin-top: 4px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+/* Stylish scrollbar for dropdown menus */
+.dropdown-menu::-webkit-scrollbar {
+  width: 6px;
+}
+
+.dropdown-menu::-webkit-scrollbar-track {
+  background: #f1f5f9;
+  border-radius: 3px;
+}
+
+.dropdown-menu::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 3px;
+  transition: background 0.2s ease;
+}
+
+.dropdown-menu::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
+
+/* Firefox scrollbar styling */
+.dropdown-menu {
+  scrollbar-width: thin;
+  scrollbar-color: #cbd5e1 #f1f5f9;
+}
+
+.dropdown-item {
+  padding: 0.4rem 0.75rem;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 6px;
+  margin: 1px;
+  font-size: 0.85rem;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.dropdown-item:hover {
+  background-color: #000000 !important;
+  color: white !important;
+}
+
+.dropdown-item:first-child {
+  margin-top: 2px;
+}
+
+.dropdown-item:last-child {
+  margin-bottom: 2px;
+}
+
+.dropdown-menu {
+  z-index: 99999 !important;
+}
+
+/* Spacing Controls */
+.spacing-controls {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.spacing-controls button {
+  background: var(--neutral-50);
+  border: 1px solid var(--neutral-200);
+  color: var(--neutral-700);
+  width: 20px;
+  height: 20px;
+  line-height: 18px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: 0.15s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  padding: 0;
+}
+
+.spacing-controls button:hover {
+  background: var(--neutral-100);
+  border-color: var(--neutral-300);
+}
+
+.dropdown-menu .dropdown-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+/* Keep compact toolbar-top styling for 1024px–1150px like tablet view */
+@media (min-width: 1024px) and (max-width: 1150px) {
+  .toolbar-top {
+    flex-wrap: nowrap;
+    align-items: center;
+    gap: 0.75rem;
+  }
+
+  .toolbar-logo {
+    font-size: 1.25rem;
+    gap: 5px;
+  }
+
+  .toolbar-logo-icon {
+    height: 18px;
+    max-width: 18px;
+  }
+
+  .toolbar-logo-name {
+    height: 14px;
+    max-width: 120px;
+  }
+
+  .toolbar-tabs {
+    max-width: 55vw;
+    overflow-x: auto;
+    white-space: nowrap;
+    gap: 0.25rem;
+    padding: 0.25rem;
+  }
+
+  .toolbar-tab {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.8rem;
+  }
+
+  .toolbar-actions {
+    gap: 0.4rem;
+  }
+
+  .toolbar-actions .toolbar-button {
+    padding: 0.25rem 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  /* Reduce format-container width and spacing for 1024px-1150px */
+  .format-container {
+    gap: 0.2rem;
+    padding: 0.25rem 0.3rem;
+  }
+
+  .format-container .toolbar-button {
+    min-width: 20px;
+    height: 20px;
+    padding: 0.08rem 0.12rem;
+    font-size: 0.65rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .format-container .toolbar-button svg {
+    width: 11px;
+    height: 11px;
+  }
+
+  .format-container .dropdown-trigger {
+    padding: 0.15rem 0.3rem;
+    font-size: 0.65rem;
+    min-width: 65px;
+    height: 20px;
+  }
+
+  .format-container .formatting-separator {
+    font-size: 0.6rem;
+    margin: 0 0.1rem;
+  }
+
+  .format-container .color-button-container .toolbar-button {
+    height: 20px;
+    min-width: 20px;
+    padding: 0.08rem 0.12rem;
+    border-radius: 2px;
+  }
+
+  .format-container .color-button-container .toolbar-button span {
+    font-size: 7px;
+  }
+
+  .format-container .font-size-btn {
+    min-width: 18px !important;
+    height: 20px !important;
+    font-size: 0.8rem;
+  }
+
+  .format-container .font-size-display {
+    min-width: 20px;
+    font-size: 0.65rem;
+    padding: 0 0.15rem;
+  }
+
+  .format-container .font-color-btn {
+    width: 28px;
+    height: 20px;
+    padding: 1.5px 3px;
+    gap: 1px;
+    border-radius: 6px;
+  }
+
+  .format-container .font-color-btn__label {
+    font-size: 10px;
+  }
+
+  .format-container .font-color-btn__swatch {
+    width: 100%;
+    height: 4px;
+  }
+}

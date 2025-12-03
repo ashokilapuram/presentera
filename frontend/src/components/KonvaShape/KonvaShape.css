@@ -1,0 +1,8 @@
+.konva-shape {
+  transition: all 0.15s ease-in-out;
+}
+
+.konva-shape:hover {
+  filter: drop-shadow(0 8px 16px rgba(0, 0, 0, 0.2)) drop-shadow(0 4px 8px rgba(0, 0, 0, 0.15));
+  cursor: grab;
+}

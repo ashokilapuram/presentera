@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Template Test</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 20px; }
+        .template-test { margin: 20px 0; padding: 20px; border: 1px solid #ccc; border-radius: 8px; }
+        .template-info { margin: 10px 0; }
+        .thumbnail { max-width: 200px; max-height: 150px; border: 1px solid #ddd; }
+        .error { color: red; }
+        .success { color: green; }
+    </style>
+</head>
+<body>
+    <h1>Template System Test</h1>
+    
+    <div class="template-test">
+        <h2>Template Files Test</h2>
+        <div id="template-files-test"></div>
+    </div>
+    
+    <div class="template-test">
+        <h2>Thumbnail Images Test</h2>
+        <div id="thumbnail-test"></div>
+    </div>
+    
+    <div class="template-test">
+        <h2>Template JSON Structure Test</h2>
+        <div id="json-structure-test"></div>
+    </div>
+
+    <script>
+        // Test template files
+        async function testTemplateFiles() {
+            const templates = ['sample_1.json', 'sample_2.json', 'sample_3.json'];
+            const results = document.getElementById('template-files-test');
+            
+            for (const template of templates) {
+                try {
+                    const response = await fetch(`/templates/${template}`);
+                    if (response.ok) {
+                        results.innerHTML += `<div class="success">✅ ${template} - Found and accessible</div>`;
+                    } else {
+                        results.innerHTML += `<div class="error">❌ ${template} - Not found (${response.status})</div>`;
+                    }
+                } catch (error) {
+                    results.innerHTML += `<div class="error">❌ ${template} - Error: ${error.message}</div>`;
+                }
+            }
+        }
+        
+        // Test thumbnail images
+        async function testThumbnails() {
+            const thumbnails = ['sample_1.png', 'sample_2.png', 'sample_3.png'];
+            const results = document.getElementById('thumbnail-test');
+            
+            for (const thumbnail of thumbnails) {
+                const img = new Image();
+                img.onload = () => {
+                    results.innerHTML += `<div class="success">✅ ${thumbnail} - Image loaded (${img.width}x${img.height})</div>`;
+                };
+                img.onerror = () => {
+                    results.innerHTML += `<div class="error">❌ ${thumbnail} - Failed to load</div>`;
+                };
+                img.src = `/images/templates/${thumbnail}`;
+            }
+        }
+        
+        // Test JSON structure
+        async function testJSONStructure() {
+            const results = document.getElementById('json-structure-test');
+            
+            try {
+                const response = await fetch('/templates/sample_1.json');
+                const data = await response.json();
+                
+                if (data.slides && Array.isArray(data.slides)) {
+                    results.innerHTML += `<div class="success">✅ JSON structure valid - ${data.slides.length} slides found</div>`;
+                    
+                    // Check first slide structure
+                    const firstSlide = data.slides[0];
+                    if (firstSlide.elements && Array.isArray(firstSlide.elements)) {
+                        results.innerHTML += `<div class="success">✅ First slide has ${firstSlide.elements.length} elements</div>`;
+                    } else {
+                        results.innerHTML += `<div class="error">❌ First slide missing elements array</div>`;
+                    }
+                } else {
+                    results.innerHTML += `<div class="error">❌ Invalid JSON structure - missing slides array</div>`;
+                }
+            } catch (error) {
+                results.innerHTML += `<div class="error">❌ JSON structure test failed: ${error.message}</div>`;
+            }
+        }
+        
+        // Run all tests
+        testTemplateFiles();
+        testThumbnails();
+        testJSONStructure();
+    </script>
+</body>
+</html>

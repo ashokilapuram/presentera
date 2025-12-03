@@ -1,0 +1,84 @@
+{
+  "templates": [
+    {
+      "id": "bigdata",
+      "name": "Big Data Analytics",
+      "description": "Professional template for big data and analytics presentations",
+      "category": "Technology",
+      "thumbnail": "/templates/thumbnails/bigdata.png",
+      "file": "bigdata.json"
+    },
+    {
+      "id": "colorful-presentation",
+      "name": "Colorful Presentation",
+      "description": "Vibrant template with colorful backgrounds and decorative elements",
+      "category": "Creative",
+      "thumbnail": "/templates/thumbnails/colorful.png",
+      "file": "colorful-presentation.json"
+    },
+    {
+      "id": "tech-showcase",
+      "name": "Tech Showcase",
+      "description": "Modern technology template with gradients and tech elements",
+      "category": "Technology",
+      "thumbnail": "/templates/thumbnails/tech.png",
+      "file": "tech-showcase.json"
+    },
+    {
+      "id": "business-presentation",
+      "name": "Business Presentation",
+      "description": "Professional business template with clean design",
+      "category": "Business",
+      "thumbnail": "/templates/thumbnails/business.png",
+      "file": "business-presentation.json"
+    },
+    {
+      "id": "creative-portfolio",
+      "name": "Creative Portfolio",
+      "description": "Modern creative template with vibrant colors",
+      "category": "Creative",
+      "thumbnail": "/templates/thumbnails/creative.png",
+      "file": "creative-portfolio.json"
+    },
+    {
+      "id": "education-lesson",
+      "name": "Education Lesson",
+      "description": "Clean educational template for teaching materials",
+      "category": "Education",
+      "thumbnail": "/templates/thumbnails/education.png",
+      "file": "education-lesson.json"
+    },
+    {
+      "id": "minimal-design",
+      "name": "Minimal Design",
+      "description": "Clean minimal template with subtle styling",
+      "category": "Minimal",
+      "thumbnail": "/templates/thumbnails/minimal.png",
+      "file": "minimal-design.json"
+    },
+    {
+      "id": "sample_1",
+      "name": "Sample Template 1",
+      "description": "Professional business presentation template",
+      "category": "Business",
+      "thumbnail": "/images/templates/sample_1.png",
+      "file": "sample_1.json"
+    },
+    {
+      "id": "sample_2",
+      "name": "Sample Template 2", 
+      "description": "Creative portfolio showcase template",
+      "category": "Creative",
+      "thumbnail": "/images/templates/sample_2.png",
+      "file": "sample_2.json"
+    },
+    {
+      "id": "sample_3",
+      "name": "Sample Template 3",
+      "description": "Modern tech presentation template", 
+      "category": "Technology",
+      "thumbnail": "/images/templates/sample_3.png",
+      "file": "sample_3.json"
+    }
+  ]
+}

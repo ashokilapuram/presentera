@@ -1,0 +1,66 @@
+/* Sidebar component styles colocated; detailed styles remain in global to preserve look */
+
+/* Slide action buttons (duplicate and delete) */
+.slide-duplicate-btn,
+.slide-delete {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+.slide-duplicate-btn:hover,
+.slide-delete:hover {
+  transform: scale(1.1);
+  background: rgba(0, 0, 0, 0.85) !important;
+}
+
+/* Responsive adjustments for slide action buttons */
+@media (max-width: 1200px) {
+  .slide-duplicate-btn,
+  .slide-delete {
+    width: 18px;
+    height: 18px;
+  }
+  
+  .slide-duplicate-btn {
+    font-size: 10px !important;
+  }
+  
+  .slide-delete {
+    font-size: 12px !important;
+  }
+}
+
+@media (max-width: 1024px) {
+  .slide-duplicate-btn,
+  .slide-delete {
+    width: 16px;
+    height: 16px;
+  }
+  
+  .slide-duplicate-btn {
+    font-size: 9px !important;
+  }
+  
+  .slide-delete {
+    font-size: 11px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .slide-duplicate-btn,
+  .slide-delete {
+    width: 14px;
+    height: 14px;
+  }
+  
+  .slide-duplicate-btn {
+    font-size: 8px !important;
+  }
+  
+  .slide-delete {
+    font-size: 10px !important;
+  }
+}
+

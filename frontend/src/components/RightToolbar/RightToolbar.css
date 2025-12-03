@@ -1,0 +1,2915 @@
+/* Right Toolbar Styles */
+.right-toolbar {
+  position: fixed;
+  top: 60px;
+  right: 4px;
+  width: 300px;
+  height: calc(100vh - 80px);
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(255, 255, 255, 0.8);
+  border-radius: var(--radius-xl, 1rem);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08),
+    0 4px 16px rgba(0, 0, 0, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.9);
+  z-index: 97;
+  margin-top: 10px;
+  margin-right: 10px;
+}
+
+.right-toolbar-header {
+  padding: var(--space-2, 0.5rem) var(--space-3, 0.75rem);
+  /* Reduced padding */
+  border-bottom: 1px solid rgba(0, 0, 0, 0.08);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.5) 0%, rgba(255, 255, 255, 0.3) 100%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.9);
+}
+
+/* Text Elements Row - 3 buttons in a row */
+.text-elements-row {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.text-element-button {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.75rem 0.5rem;
+  background: var(--neutral-50);
+  border: 1px solid var(--neutral-200);
+  border-radius: 0;
+  color: var(--neutral-700);
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: none;
+}
+
+.text-element-button:hover {
+  background-color: white;
+  border-color: var(--neutral-300);
+  transform: none;
+  box-shadow: none;
+}
+
+.text-element-button:active {
+  transform: none;
+  box-shadow: none;
+}
+
+.text-element-button svg {
+  font-size: 1.1rem;
+  color: #000000 !important;
+  stroke: #000000 !important;
+}
+
+/* Shapes Row - 4 icon buttons in a row */
+.shapes-row {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.shape-icon-button {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.75rem;
+  background: var(--neutral-50);
+  border: 1px solid var(--neutral-200);
+  border-radius: 0;
+  color: var(--neutral-700);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: none;
+}
+
+.shape-icon-button:hover {
+  background-color: white;
+  border-color: var(--neutral-300);
+  transform: none;
+  box-shadow: none;
+}
+
+.shape-icon-button:active {
+  transform: none;
+  box-shadow: none;
+}
+
+.shape-icon-button svg {
+  font-size: 1.2rem;
+  color: #000000 !important;
+  stroke: #000000 !important;
+}
+
+/* Shapes more button */
+.shapes-more-button {
+  background: transparent;
+  border: none;
+  padding: 4px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--neutral-600);
+  transition: all 0.2s ease;
+  border-radius: 4px;
+}
+
+.shapes-more-button:hover {
+  background: var(--neutral-100);
+  color: var(--neutral-800);
+}
+
+.shapes-more-button svg {
+  font-size: 1rem;
+}
+
+/* Charts Row - 3 buttons in a row */
+.charts-row {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.chart-element-button {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+  padding: 0.75rem 0.5rem;
+  background: var(--neutral-50);
+  border: 1px solid var(--neutral-200);
+  border-radius: 0;
+  color: var(--neutral-700);
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: none;
+}
+
+.chart-element-button:hover {
+  background-color: white;
+  border-color: var(--neutral-300);
+  transform: none;
+  box-shadow: none;
+}
+
+.chart-element-button:active {
+  transform: none;
+  box-shadow: none;
+}
+
+.chart-element-button svg {
+  font-size: 1.1rem;
+  color: #000000 !important;
+  stroke: #000000 !important;
+}
+
+/* Media Row - consistent button styling */
+.media-row {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+
+.media-element-button {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.75rem 0.5rem;
+  background: var(--neutral-50);
+  border: 1px solid var(--neutral-200);
+  border-radius: 0;
+  color: var(--neutral-700);
+  font-size: 0.75rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  box-shadow: none;
+}
+
+.media-element-button:hover {
+  background-color: white;
+  border-color: var(--neutral-300);
+  transform: none;
+  box-shadow: none;
+}
+
+.media-element-button:active {
+  transform: none;
+  box-shadow: none;
+}
+
+.media-element-button.active {
+  background-color: var(--neutral-100);
+  border-color: var(--neutral-400);
+  color: var(--neutral-900);
+}
+
+.media-element-button.active svg {
+  color: #ffffff !important;
+  stroke: #ffffff !important;
+}
+
+.media-element-button svg {
+  font-size: 1.4rem;
+  color: #000000 !important;
+  stroke: #000000 !important;
+}
+
+/* Right Toolbar Tabs */
+.right-toolbar-tabs {
+  display: flex;
+  gap: 0;
+  position: relative;
+  background: transparent;
+}
+
+.right-toolbar-tab {
+  flex: 1;
+  padding: 0.5rem 0.75rem;
+  /* Reduced padding */
+  background: transparent;
+  border: none;
+  color: #6b7280;
+  font-size: 0.8rem;
+  /* Reduced font size */
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-radius: 0.5rem 0.5rem 0 0;
+  position: relative;
+}
+
+.right-toolbar-tab:hover {
+  color: #374151;
+  background: rgba(255, 255, 255, 0.1);
+}
+
+.right-toolbar-tab.active {
+  color: #000000;
+  font-weight: 600;
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.toolbar-title {
+  font-size: 1.05rem;
+  font-weight: 700;
+  margin: 0;
+  font-family: var(--font-serif, 'Playfair Display', serif);
+  letter-spacing: 0.01em;
+  background: var(--gradient-primary, linear-gradient(135deg, #2563eb 0%, #7c3aed 100%));
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.right-toolbar-content {
+  flex: 1;
+  overflow-y: auto;
+  padding: var(--space-3, 0.75rem);
+  /* Reduced from space-4 to space-3 */
+}
+
+/* Section Styles */
+.right-toolbar-section {
+  margin-bottom: var(--space-6, 1.5rem);
+}
+
+.section-title {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2, 0.5rem);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--neutral-700, #404040);
+  margin-bottom: var(--space-3, 0.75rem);
+  font-family: var(--font-sans, 'Inter', sans-serif);
+}
+
+.section-title::after {
+  content: '';
+  flex: 1;
+  height: 1px;
+  background: linear-gradient(90deg, rgba(0, 0, 0, 0.06), rgba(0, 0, 0, 0));
+  margin-left: var(--space-2, 0.5rem);
+}
+
+.shapes-section-title {
+  justify-content: space-between;
+}
+
+.shapes-section-title::after {
+  display: none;
+}
+
+.option-group {
+  margin-bottom: var(--space-4, 1rem);
+  padding: var(--space-3, 0.75rem);
+  background: var(--neutral-50);
+  border: 1px solid var(--neutral-200);
+  border-radius: var(--radius-lg, 0.75rem);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.06);
+}
+
+/* Special padding for element actions */
+.option-group:has(.element-actions-container) {
+  padding: var(--space-2, 0.5rem);
+}
+
+/* Fallback for browsers without :has() support */
+.element-actions-container {
+  margin: -0.25rem;
+}
+
+/* Button Styles */
+.option-button {
+  width: 36px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md, 0.5rem);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  transition: all var(--transition-normal, 250ms ease);
+  color: var(--neutral-600, #525252);
+  margin-right: var(--space-2, 0.5rem);
+  margin-bottom: var(--space-2, 0.5rem);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.option-button:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.option-button.active {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  border: 3px solid #000000;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  font-weight: 600;
+}
+
+.option-button.active svg {
+  color: #ffffff !important;
+  stroke: #ffffff !important;
+}
+
+.option-row {
+  display: flex;
+  gap: var(--space-2, 0.5rem);
+  margin-bottom: var(--space-3, 0.75rem);
+}
+
+/* Insert Buttons */
+.insert-button {
+  width: 100%;
+  padding: var(--space-3, 0.75rem) var(--space-4, 1rem);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-lg, 0.75rem);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3, 0.75rem);
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: all var(--transition-normal, 250ms ease);
+  color: var(--neutral-700, #404040);
+  margin-bottom: var(--space-2, 0.5rem);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.insert-button:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Make all insert button icons black */
+.insert-button svg,
+.insert-button .fi {
+  color: #000000 !important;
+  stroke: #000000 !important;
+  fill: none;
+}
+
+/* When insert button is active, make icons white */
+.insert-button.active svg,
+.insert-button.active .fi {
+  color: #ffffff !important;
+  stroke: #ffffff !important;
+}
+
+/* Shape Grid */
+.shape-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-2, 0.5rem);
+}
+
+.shape-button {
+  width: 100%;
+  height: 48px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-lg, 0.75rem);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  transition: all var(--transition-normal, 250ms ease);
+  color: var(--neutral-600, #525252);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.shape-button:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+/* Make all shape button icons black */
+.shape-button svg,
+.shape-icon-button svg {
+  color: #000000 !important;
+  stroke: #000000 !important;
+  fill: none;
+}
+
+/* Theme Images Grid */
+.theme-images-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: var(--space-2, 0.5rem);
+  margin-bottom: var(--space-4, 1rem);
+}
+
+.theme-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  padding: var(--space-2, 0.5rem);
+  border-radius: var(--radius-lg, 0.75rem);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  transition: all var(--transition-normal, 250ms ease);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  min-height: 60px;
+}
+
+.theme-option:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.theme-preview {
+  width: 40px;
+  height: 30px;
+  border-radius: var(--radius-md, 0.5rem);
+  border: 3px solid rgba(255, 255, 255, 0.3);
+  box-shadow:
+    0 4px 12px rgba(0, 0, 0, 0.25),
+    0 2px 4px rgba(0, 0, 0, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.2),
+    inset 0 -1px 0 rgba(0, 0, 0, 0.1);
+  position: relative;
+  overflow: hidden;
+}
+
+.theme-preview::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+  border-radius: var(--radius-md, 0.5rem);
+  pointer-events: none;
+}
+
+.theme-option.premium1 .theme-preview {
+  background: linear-gradient(to right, #ff8008, #ffc837);
+}
+
+.theme-option.premium2 .theme-preview {
+  background: linear-gradient(to right, #ccccb2, #757519);
+}
+
+.theme-option.premium3 .theme-preview {
+  background: linear-gradient(to right, #434343, #000000);
+}
+
+.theme-option.premium4 .theme-preview {
+  background: linear-gradient(to right, #000C40, #F0F2F0);
+}
+
+/* Image Placeholder Styles */
+.theme-option.image-placeholder {
+  cursor: default;
+}
+
+.theme-option.image-placeholder:hover {
+  background-color: rgba(255, 255, 255, 0.06);
+  border-color: rgba(255, 255, 255, 0.08);
+  transform: none;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.theme-preview.image-preview {
+  background: #f3f4f6;
+  border: 2px dashed #d1d5db;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  aspect-ratio: 16/9;
+  border-radius: var(--radius-md, 0.5rem);
+  box-shadow: none;
+  position: relative;
+  overflow: hidden;
+}
+
+.theme-preview.image-preview::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1) 0%, rgba(255, 255, 255, 0.05) 100%);
+  border-radius: var(--radius-md, 0.5rem);
+  pointer-events: none;
+}
+
+/* Theme Image Placeholder - Simple version without containers */
+.theme-image-placeholder {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  aspect-ratio: 16/9;
+  background: #f3f4f6;
+  border: 2px dashed #d1d5db;
+  border-radius: var(--radius-md, 0.5rem);
+  cursor: pointer;
+  transition: all var(--transition-normal, 250ms ease);
+  position: relative;
+  overflow: hidden;
+}
+
+.theme-image-placeholder:hover {
+  border-color: #9ca3af;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.theme-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: var(--radius-md, 0.5rem);
+}
+
+.theme-fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  background: #f3f4f6;
+  border-radius: var(--radius-md, 0.5rem);
+}
+
+/* Background Container */
+.background-container {
+  margin-bottom: var(--space-4, 1rem);
+  padding: var(--space-4, 1rem);
+  background: var(--neutral-50);
+  border: 1px solid var(--neutral-200);
+  border-radius: var(--radius-lg, 0.75rem);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.background-controls {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3, 0.75rem);
+}
+
+.background-column {
+  display: flex;
+  flex-direction: column;
+}
+
+.background-row {
+  display: flex;
+  align-items: center;
+  gap: var(--space-2, 0.5rem);
+}
+
+.background-separator {
+  width: 1px;
+  height: 40px;
+  background: rgba(0, 0, 0, 0.1);
+  margin: 0 var(--space-2, 0.5rem);
+}
+
+/* Unified Background Action Button */
+.background-action-button {
+  width: 36px;
+  height: 36px;
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md, 0.5rem);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  transition: all var(--transition-normal, 250ms ease);
+  color: var(--neutral-600, #525252);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.background-action-button:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.background-action-button svg {
+  font-size: 1rem;
+  color: var(--neutral-600, #525252);
+}
+
+/* Square Color Input */
+.color-input-square {
+  width: 36px;
+  height: 36px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md, 0.5rem);
+  cursor: pointer;
+  background: none;
+  padding: 0;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+  transition: all var(--transition-normal, 250ms ease);
+}
+
+.color-input-square:hover {
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.color-input-square::-webkit-color-swatch-wrapper {
+  padding: 0;
+  border-radius: var(--radius-md, 0.5rem);
+}
+
+.color-input-square::-webkit-color-swatch {
+  border: none;
+  border-radius: var(--radius-md, 0.5rem);
+}
+
+
+/* Color Palette */
+.color-palette {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: var(--space-2, 0.5rem);
+}
+
+.color-swatch {
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 6px;
+  border: 2px solid white;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.color-swatch:hover {
+  transform: scale(1.05);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  border-width: 2px;
+}
+
+.color-swatch:active {
+  transform: scale(0.95);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Small color swatches for compact grid */
+.color-swatch-small {
+  width: 20px;
+  height: 20px;
+  border-radius: 4px;
+  border: 1.5px solid white;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.15);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.color-swatch-small:hover {
+  transform: scale(1.1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+}
+
+.color-swatch-small:active {
+  transform: scale(0.9);
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+/* Quick Colors Grid - Responsive */
+.quick-colors-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 20px);
+  gap: 4px;
+  justify-content: space-between;
+}
+
+/* Hide extra colors on smaller screens */
+.quick-colors-grid .quick-color-extra {
+  display: none;
+}
+
+/* Show 6 colors per row on larger screens (1366px+) */
+@media (min-width: 1366px) {
+  .quick-colors-grid {
+    grid-template-columns: repeat(6, 20px);
+  }
+
+  .quick-colors-grid .quick-color-extra {
+    display: block;
+  }
+}
+
+/* Input Styles */
+.size-slider,
+.zoom-slider {
+  width: 100%;
+  -webkit-appearance: none;
+  appearance: none;
+  height: 4px;
+  background: var(--neutral-200, #e5e5e5);
+  border-radius: 2px;
+  outline: none;
+  margin-bottom: var(--space-2, 0.5rem);
+}
+
+.size-slider::-webkit-slider-thumb,
+.zoom-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  background: var(--primary-500, #0ea5e9);
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.size-slider::-moz-range-thumb,
+.zoom-slider::-moz-range-thumb {
+  width: 16px;
+  height: 16px;
+  background: var(--primary-500, #0ea5e9);
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+}
+
+.size-display,
+.zoom-display {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--neutral-600, #525252);
+  text-align: center;
+}
+
+/* Right toolbar range input sliders - set thumb and track color to black */
+.right-toolbar-section .option-group input[type="range"] {
+  -webkit-appearance: none;
+  appearance: none;
+  background: transparent;
+  height: 4px;
+}
+
+.right-toolbar-section .option-group input[type="range"]::-webkit-slider-runnable-track {
+  height: 4px;
+  background: linear-gradient(to right, #000000 0%, #000000 var(--slider-value, 0%), #ffffff var(--slider-value, 0%), #ffffff 100%);
+  border-radius: 2px;
+}
+
+.right-toolbar-section .option-group input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  background: #000000;
+  border-radius: 50%;
+  cursor: pointer;
+  width: 12px;
+  height: 12px;
+  margin-top: -4px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+.right-toolbar-section .option-group input[type="range"]::-moz-range-track {
+  height: 4px;
+  background: #ffffff;
+  border-radius: 2px;
+}
+
+.right-toolbar-section .option-group input[type="range"]::-moz-range-progress {
+  height: 4px;
+  background: #000000;
+  border-radius: 2px 0 0 2px;
+}
+
+.right-toolbar-section .option-group input[type="range"]::-moz-range-thumb {
+  background: #000000;
+  border-radius: 50%;
+  cursor: pointer;
+  border: none;
+  width: 12px;
+  height: 12px;
+  box-shadow: 0 0 0 1px rgba(0, 0, 0, 0.1);
+}
+
+.color-input {
+  width: 100%;
+  height: 40px;
+  border: 1px solid var(--neutral-200, #e5e5e5);
+  border-radius: var(--radius-md, 0.5rem);
+  cursor: pointer;
+  background: none;
+  padding: 0;
+}
+
+.color-input::-webkit-color-swatch-wrapper {
+  padding: 0;
+}
+
+.color-input::-webkit-color-swatch {
+  border: none;
+  border-radius: var(--radius-sm, 0.375rem);
+}
+
+.font-select {
+  width: 100%;
+  padding: var(--space-2, 0.5rem) var(--space-3, 0.75rem);
+  border: 1px solid var(--neutral-200, #e5e5e5);
+  border-radius: var(--radius-md, 0.5rem);
+  background: white;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all var(--transition-normal, 250ms ease);
+  color: var(--neutral-700, #404040);
+}
+
+.font-select:hover {
+  border-color: rgba(0, 0, 0, 0.3);
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+.font-select:focus {
+  outline: none;
+  border: 2px solid #000000;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.2);
+}
+
+/* Action Buttons */
+.action-button {
+  width: 100%;
+  padding: var(--space-2, 0.5rem) var(--space-4, 1rem);
+  background: white;
+  border: 1px solid var(--neutral-200, #e5e5e5);
+  border-radius: var(--radius-md, 0.5rem);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: var(--space-2, 0.5rem);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all var(--transition-normal, 250ms ease);
+  color: var(--neutral-700, #404040);
+  margin-bottom: var(--space-2, 0.5rem);
+}
+
+.action-button:hover {
+  background-color: var(--neutral-50, #fafafa);
+  border-color: var(--neutral-300, #d4d4d4);
+  box-shadow: var(--shadow-sm, 0 1px 2px 0 rgb(0 0 0 / 0.05));
+}
+
+.action-button.danger {
+  color: var(--accent-rose, #f43f5e);
+}
+
+.action-button.danger:hover {
+  background-color: #fef2f2;
+  border-color: #fecaca;
+}
+
+/* View Buttons */
+.view-button,
+.layer-button,
+.quick-button {
+  width: 100%;
+  padding: var(--space-3, 0.75rem) var(--space-4, 1rem);
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-lg, 0.75rem);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: var(--space-3, 0.75rem);
+  font-size: 0.875rem;
+  font-weight: 500;
+  transition: all var(--transition-normal, 250ms ease);
+  color: var(--neutral-700, #404040);
+  margin-bottom: var(--space-2, 0.5rem);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.view-button:hover,
+.layer-button:hover,
+.quick-button:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+.view-button.active {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  border: 3px solid #000000;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  font-weight: 600;
+}
+
+/* Element Info */
+.element-info {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: var(--radius-lg, 0.75rem);
+  padding: var(--space-4, 1rem);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.info-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--space-2, 0.5rem);
+  font-size: 0.875rem;
+}
+
+.info-row:last-child {
+  margin-bottom: 0;
+}
+
+.info-row span:first-child {
+  font-weight: 500;
+  color: var(--neutral-600, #525252);
+}
+
+.info-row span:last-child {
+  font-weight: 600;
+  color: var(--neutral-800, #262626);
+  font-family: var(--font-mono, 'JetBrains Mono', monospace);
+}
+
+.no-selection {
+  text-align: center;
+  color: var(--neutral-400, #a3a3a3);
+  font-style: italic;
+  padding: var(--space-4, 1rem);
+}
+
+/* Scrollbar Styling */
+.right-toolbar-content::-webkit-scrollbar {
+  width: 6px;
+}
+
+.right-toolbar-content::-webkit-scrollbar-track {
+  background: var(--neutral-100, #f5f5f5);
+}
+
+.right-toolbar-content::-webkit-scrollbar-thumb {
+  background: var(--neutral-300, #d4d4d4);
+  border-radius: 3px;
+}
+
+.right-toolbar-content::-webkit-scrollbar-thumb:hover {
+  background: var(--neutral-400, #a3a3a3);
+}
+
+/* Dark mode styles */
+body.dark .right-toolbar {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  box-shadow:
+    0 8px 32px rgba(0, 0, 0, 0.3),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+body.dark .right-toolbar-header {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.05) 0%, rgba(255, 255, 255, 0.03) 100%);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+body.dark .option-group {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+body.dark .background-container {
+  background: rgba(255, 255, 255, 0.1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+body.dark .option-button {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+body.dark .option-button:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+body.dark .insert-button {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+body.dark .insert-button:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+body.dark .shape-button {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+body.dark .shape-button:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+body.dark .view-button,
+body.dark .layer-button,
+body.dark .quick-button {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+body.dark .view-button:hover,
+body.dark .layer-button:hover,
+body.dark .quick-button:hover {
+  background-color: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+body.dark .element-info {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+body.dark .option-button.active {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  border: 3px solid #000000;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  font-weight: 600;
+}
+
+body.dark .view-button.active {
+  background: var(--bg-primary);
+  color: var(--text-primary);
+  border: 3px solid #000000;
+  box-shadow: 0 0 15px rgba(0, 0, 0, 0.4);
+  font-weight: 600;
+}
+
+/* Responsive Element Actions */
+@media (max-width: 1200px) {
+  .element-actions-container {
+    gap: 2px;
+    padding: 1px;
+  }
+
+  .action-button-icon {
+    width: 30px;
+    height: 30px;
+  }
+
+  .action-button-icon svg {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+/* Reduce width for screens 1101px-1150px to give canvas more space */
+@media (min-width: 1101px) and (max-width: 1150px) {
+  .right-toolbar {
+    width: 180px;
+    /* Even further reduced from 300px */
+  }
+
+  /* Optimize spacing and sizes for compact display */
+  .section-title {
+    font-size: 0.7rem;
+    /* Further reduced from 0.75rem */
+    margin-bottom: 0.4rem;
+    /* Further reduced from 0.5rem */
+    gap: 0.2rem;
+    /* Further reduced from 0.25rem */
+  }
+
+  .option-group {
+    margin-bottom: 0.6rem;
+    /* Further reduced from 0.75rem */
+    padding: 0.6rem;
+    /* Further reduced from 0.75rem */
+  }
+
+  .right-toolbar-content {
+    padding: 0.4rem;
+    /* Further reduced from 0.5rem */
+  }
+
+  .right-toolbar-section {
+    margin-bottom: 0.8rem;
+    /* Further reduced from 1rem */
+  }
+
+  .right-toolbar-header {
+    padding: 0.3rem 0.5rem;
+    /* Further reduced padding */
+  }
+
+  .toolbar-title {
+    font-size: 0.85rem;
+    /* Further reduced from 0.9rem */
+  }
+
+  .right-toolbar-tab {
+    padding: 0.3rem 0.5rem;
+    /* Further reduced padding */
+    font-size: 0.7rem;
+    /* Further reduced from 0.75rem */
+  }
+
+  /* Compact element actions for small screens */
+  .element-actions-container {
+    gap: 1px;
+    padding: 1px;
+  }
+
+  .action-button-icon {
+    width: 26px;
+    height: 26px;
+    flex-shrink: 0;
+  }
+
+  .action-button-icon svg {
+    width: 12px;
+    height: 12px;
+  }
+
+  /* Compact color palettes for 1024px screens */
+  .color-palette-item {
+    gap: 1px !important;
+    padding: 2px !important;
+  }
+
+  .color-palette-item .color-swatch-palette {
+    width: 12px !important;
+    height: 12px !important;
+    min-width: 12px !important;
+    min-height: 12px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .element-actions-container {
+    gap: 1px;
+    padding: 1px;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+
+  .action-button-icon {
+    width: 24px;
+    height: 24px;
+    flex-shrink: 0;
+  }
+
+  .action-button-icon svg {
+    width: 11px;
+    height: 11px;
+  }
+
+  /* Chart components - Further reduced sizes for mobile */
+  .chart-name-label,
+  .chart-options-label {
+    font-size: 0.65rem !important;
+  }
+
+  .chart-name-input,
+  .chart-edit-data-button {
+    height: 26px !important;
+    padding: 0.3rem 0.4rem !important;
+    font-size: 0.7rem !important;
+  }
+
+  .chart-option-item {
+    min-height: 26px !important;
+    padding: 0.3rem 0.4rem !important;
+  }
+
+  .chart-option-item label {
+    font-size: 0.7rem !important;
+  }
+
+  /* Delete button - Ensure it's visible on mobile */
+  .chart-background-delete-btn {
+    width: 16px !important;
+    height: 16px !important;
+    min-width: 16px !important;
+    min-height: 16px !important;
+  }
+
+  .chart-background-delete-btn svg,
+  .chart-background-delete-btn .delete-icon {
+    width: 9px !important;
+    height: 9px !important;
+    min-width: 9px !important;
+    min-height: 9px !important;
+  }
+}
+
+@media (max-width: 480px) {
+  .element-actions-container {
+    gap: 1px;
+    padding: 1px;
+    flex-wrap: nowrap;
+    justify-content: center;
+  }
+
+  .action-button-icon {
+    width: 22px;
+    height: 22px;
+    flex-shrink: 0;
+  }
+
+  .action-button-icon svg {
+    width: 10px;
+    height: 10px;
+  }
+
+  /* Chart components - Even smaller for very small screens */
+  .chart-name-label,
+  .chart-options-label {
+    font-size: 0.6rem !important;
+  }
+
+  .chart-name-input,
+  .chart-edit-data-button {
+    height: 24px !important;
+    padding: 0.25rem 0.35rem !important;
+    font-size: 0.65rem !important;
+  }
+
+  .chart-option-item {
+    min-height: 24px !important;
+    padding: 0.25rem 0.35rem !important;
+  }
+
+  .chart-option-item label {
+    font-size: 0.65rem !important;
+  }
+
+  /* Delete button - Minimum size to ensure visibility */
+  .chart-background-delete-btn {
+    width: 16px !important;
+    height: 16px !important;
+    min-width: 16px !important;
+    min-height: 16px !important;
+  }
+
+  .chart-background-delete-btn svg,
+  .chart-background-delete-btn .delete-icon {
+    width: 8px !important;
+    height: 8px !important;
+    min-width: 8px !important;
+    min-height: 8px !important;
+  }
+}
+
+/* Responsive Design */
+@media (max-width: 1200px) {
+  .right-toolbar {
+    width: 280px;
+    /* slightly wider on medium screens as well */
+    top: 60px;
+    /* Same good gap as 1024px screens */
+    height: calc(100vh - 80px);
+    /* Extended to use more vertical space */
+  }
+}
+
+@media (max-width: 768px) {
+  .right-toolbar {
+    width: 260px;
+    /* slightly wider on small screens as well */
+    top: 80px;
+    height: calc(100vh - 104px);
+    /* Decreased height for consistency */
+  }
+
+  .theme-grid,
+  .shape-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .color-palette {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* Slider styling for 1024px to 1100px screens - make sliders compact */
+@media (min-width: 1024px) and (max-width: 1100px) {
+
+  /* Compact sliders - match textbox slider styling */
+  .option-group input[type="range"] {
+    height: 4px !important;
+    cursor: pointer !important;
+  }
+
+  /* Compact slider value displays - target all value display divs after range inputs */
+  .option-group input[type="range"]+div,
+  .option-group div:has(+ input[type="range"])+div,
+  .option-group div[style*="minWidth"][style*="textAlign"] {
+    min-width: 28px !important;
+    font-size: 11px !important;
+    padding: 2px 6px !important;
+    height: 20px !important;
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+  }
+
+  /* Ensure slider containers have compact spacing - target flex containers with range inputs */
+  .option-group>div:has(input[type="range"]) {
+    gap: 6px !important;
+  }
+
+  /* Target slider containers with marginTop */
+  .option-group>div:has(input[type="range"])[style*="marginTop"] {
+    margin-top: 8px !important;
+  }
+
+  /* Reduce vertical padding in option-groups for TextOptions, ImageOptions, and ShapeOptions */
+  /* Target option-groups with flex-direction: column (these sections use inline styles with this property) */
+  .right-toolbar-section .option-group[style*="flex-direction: column"] {
+    padding-top: 0.5rem !important;
+    padding-bottom: 0.5rem !important;
+    /* Keep horizontal padding same */
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+    /* Increase vertical gap between option-groups */
+    margin-bottom: 1.25rem !important;
+  }
+}
+
+/* Tablet breakpoint to match App.css adjustments - extended to 1100px */
+@media (max-width: 1100px) {
+  .right-toolbar {
+    width: 260px;
+    right: 14px;
+    /* Moved further left to balance gap with canvas and sidebar */
+    margin-right: 0;
+    /* Remove margin since we're using right positioning */
+    top: 56px;
+    /* Reduced gap from toolbar-top for tighter layout */
+  }
+
+  /* Compact header - reduce gap between header and tabs */
+  .right-toolbar-header {
+    padding: 0.35rem 0.5rem;
+    /* Reduced padding for compact height */
+  }
+
+  .toolbar-title {
+    font-size: 0.85rem;
+    /* Reduced from 0.95rem */
+  }
+
+  /* Compact tabs */
+  .right-toolbar-tab {
+    padding: 0.35rem 0.5rem;
+    /* Reduced padding */
+    font-size: 0.7rem;
+    /* Reduced font size */
+  }
+
+  /* Compact content area */
+  .right-toolbar-content {
+    padding: 0.4rem;
+    /* Reduced padding */
+  }
+
+  /* Compact section titles */
+  .section-title {
+    font-size: 0.7rem;
+    /* Reduced from 0.85rem */
+    margin-bottom: 0.4rem;
+    /* Reduced vertical gap below section-title */
+    gap: 0.2rem;
+    /* Reduced gap */
+  }
+
+  /* Compact sections */
+  .right-toolbar-section {
+    margin-bottom: 0.8rem;
+    /* Reduced vertical gap between sections */
+  }
+
+  /* Compact option groups */
+  .option-group {
+    margin-bottom: 0.4rem;
+    /* Reduced vertical gap below option-group */
+    padding: 0.4rem;
+    /* Reduced padding - minimal gaps */
+  }
+
+  /* Compact buttons */
+  .option-button {
+    width: 32px;
+    height: 32px;
+  }
+
+  .insert-button,
+  .view-button,
+  .layer-button,
+  .quick-button {
+    padding: 0.5rem 0.7rem;
+    /* Reduced padding */
+  }
+
+  .font-select {
+    padding: 0.35rem 0.5rem;
+    /* Reduced padding */
+  }
+
+  /* Compact element button rows */
+  .text-elements-row,
+  .shapes-row,
+  .chart-row,
+  .media-row {
+    margin-bottom: 0.6rem;
+    /* Reduced vertical gap */
+  }
+
+  /* Compact element buttons */
+  .text-element-button,
+  .shape-element-button,
+  .chart-element-button,
+  .media-element-button {
+    padding: 0.5rem 0.35rem;
+    /* Reduced padding */
+    font-size: 0.7rem;
+    /* Reduced font size */
+  }
+
+  /* Compact chart name input - reduce gap between input and container */
+  .option-group[style*="flex-direction: column"] {
+    gap: 4px !important;
+    /* Reduced from 8px */
+  }
+
+  /* Compact chart name input box */
+  .option-group input[type="text"] {
+    padding: 3px 5px !important;
+    /* Reduced padding */
+    font-size: 11px !important;
+    /* Reduced font size */
+    border-radius: 3px !important;
+  }
+
+  /* Compact chart name button */
+  .option-group button {
+    padding: 4px 8px !important;
+    /* Reduced padding */
+    font-size: 11px !important;
+    /* Reduced font size */
+    border-radius: 4px !important;
+  }
+
+  /* Compact color container - reduce vertical gaps */
+  .option-group[style*="gap: 16"] {
+    gap: 8px !important;
+    /* Reduced from 16px */
+  }
+
+  /* Compact color palette items - reduce gap between options */
+  .color-palette-item {
+    gap: 1px !important;
+    /* Reduced gap */
+    padding: 2px !important;
+    /* Reduced padding */
+  }
+
+  /* Smaller color swatches in palette */
+  .color-swatch-palette {
+    width: 12px !important;
+    /* Reduced from 16px */
+    height: 12px !important;
+    /* Reduced from 16px */
+    min-width: 12px !important;
+    min-height: 12px !important;
+  }
+
+  /* Compact color section labels */
+  .option-group div[style*="fontSize: '12px'"] {
+    font-size: 10px !important;
+    /* Reduced font size */
+    margin-bottom: 4px !important;
+    /* Reduced margin */
+  }
+
+  /* Compact color palette wrapper gaps */
+  .option-group div[style*="gap: 6"] {
+    gap: 4px !important;
+    /* Reduced gap */
+  }
+
+  /* Compact all text in option-group */
+  .option-group {
+    font-size: 0.7rem;
+    /* Reduced base font size */
+  }
+
+  /* Compact option-group inputs and selects */
+  .option-group input,
+  .option-group select,
+  .option-group textarea {
+    font-size: 0.7rem !important;
+    /* Reduced font size */
+    padding: 0.25rem 0.4rem !important;
+    /* Reduced padding */
+  }
+
+  /* Compact option-group labels */
+  .option-group label {
+    font-size: 0.7rem !important;
+    /* Reduced font size */
+    margin-bottom: 0.2rem !important;
+    /* Reduced margin */
+  }
+
+  /* Compact action buttons */
+  .action-button {
+    padding: 0.35rem 0.5rem !important;
+    /* Reduced padding */
+    font-size: 0.7rem !important;
+    /* Reduced font size */
+    margin-bottom: 0.3rem !important;
+    /* Reduced margin */
+  }
+
+  /* Compact size displays */
+  .size-display,
+  .zoom-display {
+    font-size: 0.7rem !important;
+    /* Reduced font size */
+  }
+
+  /* Compact info rows */
+  .info-row {
+    font-size: 0.7rem !important;
+    /* Reduced font size */
+    margin-bottom: 0.3rem !important;
+    /* Reduced margin */
+  }
+
+  /* Compact color inputs */
+  .color-input {
+    height: 32px !important;
+    /* Reduced from 40px */
+  }
+
+  .color-input-square {
+    width: 28px !important;
+    /* Reduced from 36px */
+    height: 28px !important;
+    /* Reduced from 36px */
+  }
+
+  /* Chart Name and Chart Options - Responsive adjustments */
+  .chart-name-label,
+  .chart-options-label {
+    font-size: 0.7rem !important;
+    /* Reduced from 0.875rem */
+    margin-bottom: 0.2rem !important;
+    /* Reduced from 0.25rem */
+  }
+
+  /* Chart Name Input and Edit Data Button - Reduced height */
+  .chart-name-input,
+  .chart-edit-data-button {
+    height: 28px !important;
+    /* Reduced from 36px */
+    padding: 0.375rem 0.5rem !important;
+    /* Reduced padding */
+    font-size: 0.75rem !important;
+    /* Reduced from 0.875rem */
+  }
+
+  /* Chart Options - Ensure labels are vertically centered */
+  .chart-option-item {
+    min-height: 28px !important;
+    /* Reduced from 36px */
+    padding: 0.375rem 0.5rem !important;
+    /* Reduced padding */
+  }
+
+  .chart-option-item label {
+    font-size: 0.75rem !important;
+    /* Reduced from 0.875rem */
+    display: flex !important;
+    align-items: center !important;
+  }
+
+  /* Background delete button - Make it responsive and visible */
+  .chart-background-delete-btn {
+    width: 18px !important;
+    height: 18px !important;
+    min-width: 18px !important;
+    min-height: 18px !important;
+  }
+
+  .chart-background-delete-btn svg,
+  .chart-background-delete-btn .delete-icon {
+    width: 10px !important;
+    height: 10px !important;
+    min-width: 10px !important;
+    min-height: 10px !important;
+  }
+
+  /* Ensure background item has proper spacing for delete button */
+  .chart-background-item {
+    gap: 0.375rem !important;
+    /* Reduced gap */
+  }
+}
+
+/* Text Modal Styles */
+.text-modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 9999;
+  animation: modalFadeIn 0.3s ease-out;
+}
+
+.text-modal {
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+  max-width: 500px;
+  width: 90%;
+  max-height: 80vh;
+  overflow: hidden;
+  animation: modalSlideIn 0.3s ease-out;
+  position: relative;
+  margin: auto;
+}
+
+.text-modal-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 24px;
+  border-bottom: 1px solid #e5e7eb;
+  background: #f9fafb;
+}
+
+.text-modal-header h3 {
+  margin: 0;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.text-modal-close {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #6b7280;
+  cursor: pointer;
+  padding: 4px;
+  border-radius: 4px;
+  transition: all 0.2s ease;
+}
+
+.text-modal-close:hover {
+  background: #e5e7eb;
+  color: #374151;
+}
+
+.text-modal-content {
+  padding: 24px;
+}
+
+.text-options {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 16px;
+}
+
+.text-option {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 20px;
+  border: 2px solid #e5e7eb;
+  border-radius: 8px;
+  background: white;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  text-align: left;
+}
+
+.text-option:hover {
+  border-color: #0ea5e9;
+  background: #f0f9ff;
+  box-shadow: 0 4px 12px rgba(14, 165, 233, 0.15);
+}
+
+.text-option-icon {
+  width: 48px;
+  height: 48px;
+  background: #0ea5e9;
+  color: white;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  font-weight: 600;
+  flex-shrink: 0;
+}
+
+.text-option-content h4 {
+  margin: 0 0 4px 0;
+  font-size: 1rem;
+  font-weight: 600;
+  color: #111827;
+}
+
+.text-option-content p {
+  margin: 0;
+  font-size: 0.875rem;
+  color: #6b7280;
+  line-height: 1.4;
+}
+
+@keyframes modalFadeIn {
+  from {
+    opacity: 0;
+  }
+
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes modalSlideIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* Element Actions Container */
+.element-actions-container {
+  display: flex;
+  gap: 3px;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  padding: 2px;
+  overflow-x: auto;
+  min-width: 0;
+}
+
+.action-button-icon {
+  width: 32px;
+  height: 32px;
+  background: #ffffff;
+  border: 1px solid #e5e7eb;
+  border-radius: 6px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.15s ease;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+  flex-shrink: 0;
+}
+
+.action-button-icon:hover {
+  background: #f9fafb;
+  border-color: #d1d5db;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.action-button-icon:active {
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
+}
+
+.action-button-icon svg {
+  stroke: #374151;
+  width: 16px;
+  height: 16px;
+  transition: transform 0.15s ease, stroke 0.15s ease;
+}
+
+.action-button-icon:hover svg {
+  stroke: #111827;
+  /* neutral dark gray instead of blue */
+}
+
+.action-button-icon.danger {
+  color: #ef4444;
+}
+
+.action-button-icon.danger:hover {
+  background: #fef2f2;
+  border-color: #fecaca;
+}
+
+.action-button-icon.danger svg {
+  stroke: #ef4444;
+}
+
+.action-button-icon.danger:hover svg {
+  stroke: #dc2626;
+}
+
+/* Dark mode for element actions */
+body.dark .action-button-icon {
+  background: rgba(255, 255, 255, 0.06);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+body.dark .action-button-icon:hover {
+  background: rgba(255, 255, 255, 0.12);
+  border-color: rgba(255, 255, 255, 0.15);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.12),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+}
+
+body.dark .action-button-icon svg {
+  stroke: #e5e7eb;
+}
+
+body.dark .action-button-icon:hover svg {
+  stroke: #e5e7eb;
+  /* light gray in dark mode */
+}
+
+body.dark .action-button-icon.danger {
+  color: #f87171;
+}
+
+body.dark .action-button-icon.danger:hover {
+  background: rgba(239, 68, 68, 0.1);
+  border-color: rgba(239, 68, 68, 0.2);
+}
+
+body.dark .action-button-icon.danger svg {
+  stroke: #f87171;
+}
+
+body.dark .action-button-icon.danger:hover svg {
+  stroke: #ef4444;
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+  .text-modal {
+    background: #1f2937;
+    color: #f9fafb;
+  }
+
+  .text-modal-header {
+    background: #111827;
+    border-bottom-color: #374151;
+  }
+
+  .text-modal-header h3 {
+    color: #f9fafb;
+  }
+
+  .text-modal-close {
+    color: #9ca3af;
+  }
+
+  .text-modal-close:hover {
+    background: #374151;
+    color: #f9fafb;
+  }
+
+  .text-option {
+    background: #1f2937;
+    border-color: #374151;
+  }
+
+  .text-option:hover {
+    background: #0f172a;
+    border-color: #0ea5e9;
+  }
+
+  .text-option-content h4 {
+    color: #f9fafb;
+  }
+
+  .text-option-content p {
+    color: #9ca3af;
+  }
+}
+
+/* Table Style Selector */
+.table-style-selector {
+  margin-top: 1rem;
+  padding: 1rem;
+  background: #f9fafb;
+  border: 1px solid #e5e7eb;
+  border-radius: var(--radius-md);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.table-style-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+  font-weight: 600;
+  font-size: 0.875rem;
+  color: #374151;
+}
+
+.table-style-close {
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6b7280;
+  transition: color 0.2s;
+  border-radius: 4px;
+}
+
+.table-style-close:hover {
+  color: #374151;
+  background: #e5e7eb;
+}
+
+.table-style-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
+}
+
+.table-style-preview {
+  cursor: pointer;
+  padding: 0.5rem;
+  background: white;
+  border: 2px solid #e5e7eb;
+  border-radius: var(--radius-md);
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.table-style-preview:hover {
+  border-color: #000000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.table-preview {
+  width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.table-preview-row {
+  display: flex;
+  height: 8px;
+  border-bottom: 1px solid #d1d5db;
+}
+
+.table-preview-row:last-child {
+  border-bottom: none;
+}
+
+.table-preview-header {
+  height: 10px;
+}
+
+.table-preview-cell {
+  flex: 1;
+  border-right: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.table-preview-cell:last-child {
+  border-right: none;
+}
+
+.table-style-name {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #374151;
+  text-align: center;
+}
+
+/* Table Style Grid Inline (in TableOptions) */
+.table-style-grid-inline {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+}
+
+.table-style-preview-inline {
+  cursor: pointer;
+  padding: 0.5rem;
+  background: white;
+  border: 2px solid #e5e7eb;
+  border-radius: var(--radius-md);
+  transition: all 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.25rem;
+}
+
+.table-style-preview-inline:hover {
+  border-color: #000000;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.table-style-preview-inline .table-preview {
+  width: 100%;
+  border: 1px solid #d1d5db;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  padding: 0;
+  margin: 0;
+  min-height: auto;
+  height: auto;
+}
+
+/* Responsive adjustments for inline table styles */
+/* Table styles for 1024px and below - moved to max-width: 1023px to avoid conflict */
+@media (max-width: 1023px) {
+  .table-style-grid-inline {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 0.3rem;
+  }
+
+  .table-style-preview-inline {
+    padding: 0.3rem;
+  }
+
+  /* Decrease table style preview height to maintain ratio */
+  .table-style-preview-inline .table-preview {
+    min-height: auto !important;
+    height: auto !important;
+  }
+
+  .table-style-preview-inline .table-preview-row {
+    height: 6px;
+  }
+
+  .table-style-preview-inline .table-preview-header {
+    height: 8px;
+  }
+}
+
+/* Increase gaps between chart option containers for screens 1024px and above */
+@media (min-width: 1024px) {
+
+  .right-toolbar-section .chart-name-container,
+  .right-toolbar-section .chart-options-container {
+    margin-bottom: 1.05rem !important;
+    /* Slightly increased gap for better spacing */
+  }
+
+  /* Target color palette container (option-group containing color palettes) */
+  .right-toolbar-section .option-group:has(.color-palette-item),
+  .right-toolbar-section .option-group:has(.color-swatch-palette) {
+    margin-bottom: 1.05rem !important;
+    /* Slightly increased gap for better spacing */
+  }
+
+  /* Table Structure - Decrease label size and padding */
+  .table-structure-label {
+    font-size: 0.7rem !important;
+    /* Decreased from 0.875rem */
+  }
+
+  .table-structure-container {
+    padding: 0.5rem !important;
+    /* Decreased from 0.75rem */
+  }
+
+  /* Decrease padding in border options container */
+  .table-border-options-container {
+    padding: 0.25rem !important;
+    /* Decreased from 0.375rem */
+  }
+
+  /* Reduce input width in rows and columns options for smaller screens (1024px and above) */
+  .table-rows-columns-options-container .table-structure-input {
+    width: 45px !important;
+    min-width: 45px !important;
+    max-width: 45px !important;
+  }
+
+  /* Prevent overflow but keep spinner buttons visible */
+  .table-rows-columns-options-container {
+    overflow: hidden !important;
+  }
+
+  .table-rows-columns-options-container .table-header-second-row {
+    overflow: visible !important;
+  }
+
+  /* Decrease padding in table icons header row containers - perfect wrap */
+  .table-icons-row-container {
+    padding: 0.25rem !important;
+    /* Reduced to fit buttons perfectly */
+    display: flex !important;
+    align-items: center !important;
+  }
+
+  /* Decrease padding in table icons header row - remove extra space */
+  .table-header-icons-row {
+    padding: 0 !important;
+    margin-bottom: 0 !important;
+    display: flex !important;
+    align-items: center !important;
+    width: 100% !important;
+  }
+
+  /* Decrease table icon button heights */
+  .table-header-icon-btn {
+    width: 24px !important;
+    height: 24px !important;
+    min-width: 24px !important;
+  }
+
+  .table-header-icon-btn svg {
+    width: 14px !important;
+    height: 14px !important;
+  }
+
+  /* Table style grid - consistent for 1024px and above */
+  .table-style-grid-inline {
+    grid-template-columns: repeat(4, 1fr) !important;
+    gap: 0.5rem !important;
+  }
+
+  .table-style-preview-inline {
+    padding: 0.5rem !important;
+  }
+
+  .table-style-preview-inline .table-preview {
+    min-height: auto !important;
+    height: auto !important;
+  }
+
+  .table-style-preview-inline .table-preview-row {
+    height: 7px !important;
+    /* Slightly decreased from 8px */
+  }
+
+  .table-style-preview-inline .table-preview-header {
+    height: 9px !important;
+    /* Slightly decreased from 10px */
+  }
+
+  /* Increase gap between table option containers to match chart options */
+  .right-toolbar-section .table-structure-container,
+  .right-toolbar-section .table-styling-container,
+  .right-toolbar-section .table-styles-container {
+    margin-bottom: 1.05rem !important;
+    /* Match chart options gap */
+  }
+}
+
+@media (max-width: 768px) {
+  .table-style-grid-inline {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.35rem;
+  }
+
+  .table-style-preview-inline {
+    padding: 0.35rem;
+  }
+}
+
+/* Table Styling Tabs Container */
+.table-styling-tabs-container {
+  margin-top: 1rem;
+  border: 1px solid #e5e7eb;
+  border-radius: var(--radius-md);
+  overflow: hidden;
+  background: #ffffff;
+}
+
+.table-styling-tabs {
+  display: flex;
+  background: #f9fafb;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.table-styling-tab {
+  flex: 1;
+  padding: 0.5rem 0.75rem;
+  background: transparent;
+  border: none;
+  color: #6b7280;
+  font-size: 0.75rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  border-bottom: 2px solid transparent;
+  position: relative;
+}
+
+.table-styling-tab:hover {
+  color: #374151;
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.table-styling-tab.active {
+  color: #000000;
+  font-weight: 600;
+  background: #ffffff;
+  border-bottom-color: #3b82f6;
+}
+
+.table-styling-content {
+  padding: 0.75rem;
+  background: #ffffff;
+}
+
+/* Table Header Styling Icons Row */
+.table-header-icons-row {
+  display: flex;
+  gap: 0;
+  margin-bottom: 8px;
+  align-items: center;
+  flex-wrap: nowrap;
+  justify-content: space-evenly;
+  width: 100%;
+}
+
+.table-header-icon-btn {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  min-width: 28px;
+  cursor: pointer;
+  padding: 0;
+  border-radius: 4px;
+  background: transparent;
+  border: 1px solid transparent;
+  color: #6b7280;
+  transition: all 0.2s ease;
+}
+
+.table-header-icon-btn:hover {
+  background: #f3f4f6;
+  color: #374151;
+}
+
+.table-header-icon-btn svg {
+  width: 16px;
+  height: 16px;
+  color: #6b7280;
+  stroke: #6b7280;
+}
+
+.table-header-icon-btn:hover svg {
+  color: #374151;
+  stroke: #374151;
+}
+
+.table-header-icon-btn.active {
+  background: #000000;
+  color: #ffffff;
+  border-color: #000000;
+}
+
+.table-header-icon-btn.active svg {
+  color: #ffffff;
+  stroke: #ffffff;
+}
+
+
+.table-header-color-icon {
+  position: relative;
+  width: 36px;
+  height: 36px;
+  flex-shrink: 0;
+}
+
+.table-header-color-icon input[type="color"] {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.table-header-color-icon>div {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #000000;
+}
+
+/* Table Header Font Color Button (like toolbar top) */
+.table-header-font-color-btn {
+  position: relative;
+  width: 32px;
+  height: 36px;
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.table-header-color-picker {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 2;
+}
+
+.table-header-font-color-btn-inner {
+  appearance: none;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  background: #18181b;
+  color: #fafafa;
+  border-radius: 6px;
+  padding: 2px 4px;
+  width: 32px;
+  height: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1px;
+  cursor: pointer;
+  transition: transform 0.12s ease, background 0.12s ease, box-shadow 0.12s ease;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.35),
+    inset 0 0 0 1px rgba(255, 255, 255, 0.02);
+  user-select: none;
+  overflow: visible;
+  margin: 0;
+}
+
+.table-header-font-color-btn-inner:hover {
+  background: #1f1f25;
+}
+
+.table-header-font-color-btn-inner:active {
+  background: #141419;
+}
+
+.table-header-font-color-btn__label {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1;
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto,
+    Ubuntu, Cantarell, Noto Sans, Arial;
+  display: block;
+  flex-shrink: 0;
+  color: #fafafa;
+}
+
+.table-header-font-color-btn__swatch {
+  width: 100%;
+  height: 5px;
+  border-radius: 999px;
+  box-shadow: inset 0 0 0 1px rgba(255, 255, 255, 0.15),
+    0 1px 2px rgba(0, 0, 0, 0.35);
+  display: block;
+  flex-shrink: 0;
+}
+
+.table-header-bg-color-icon {
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  color: #000000;
+  border-radius: 4px;
+  transition: background 0.2s ease;
+}
+
+.table-header-bg-color-icon:hover {
+  background: #f3f4f6;
+}
+
+/* Responsive adjustments for table styling tabs */
+/* Table styling adjustments for screens below 1024px */
+@media (max-width: 1023px) {
+  .table-styling-tab {
+    padding: 0.4rem 0.5rem;
+    font-size: 0.7rem;
+  }
+
+  .table-styling-content {
+    padding: 0.5rem;
+  }
+
+  .table-header-icons-row {
+    gap: 6px;
+  }
+
+  .table-header-icon-btn {
+    padding: 4px;
+  }
+
+  .table-header-icon-btn svg {
+    width: 16px;
+    height: 16px;
+  }
+
+  .table-header-second-row {
+    gap: 8px;
+  }
+
+  .table-header-font-color-btn {
+    width: 32px;
+    height: 32px;
+  }
+
+  .table-header-color-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .table-header-color-icon>div {
+    width: 32px;
+    height: 32px;
+  }
+
+  .table-header-color-icon>div svg {
+    width: 16px;
+    height: 16px;
+  }
+}
+
+@media (max-width: 768px) {
+  .table-styling-tab {
+    padding: 0.35rem 0.4rem;
+    font-size: 0.65rem;
+  }
+
+  .table-styling-content {
+    padding: 0.4rem;
+  }
+
+  .table-header-icons-row {
+    gap: 4px;
+    margin-bottom: 10px;
+  }
+
+  .table-header-icon-btn {
+    padding: 3px;
+  }
+
+  .table-header-icon-btn svg {
+    width: 14px;
+    height: 14px;
+  }
+
+  .table-header-font-color-btn {
+    width: 28px;
+    height: 28px;
+  }
+
+  .table-header-font-color-btn-inner {
+    width: 28px;
+    height: 20px;
+    padding: 1px 3px;
+  }
+
+  .table-header-font-color-btn__label {
+    font-size: 10px;
+  }
+
+  .table-header-font-color-btn__swatch {
+    height: 4px;
+  }
+
+  .table-header-second-row {
+    gap: 6px;
+  }
+
+  .table-header-color-icon {
+    width: 28px;
+    height: 28px;
+  }
+
+  .table-header-color-icon>div {
+    width: 28px;
+    height: 28px;
+  }
+
+  .table-header-color-icon>div svg {
+    width: 14px;
+    height: 14px;
+  }
+}
+
+/* Text Style Delete Button - Ensure icon is maximum size on all screens */
+.text-style-delete-btn {
+  width: 24px !important;
+  height: 24px !important;
+  padding: 2px !important;
+}
+
+.text-style-delete-btn svg {
+  width: 16px !important;
+  height: 16px !important;
+  min-width: 16px !important;
+  min-height: 16px !important;
+  max-width: 16px !important;
+  max-height: 16px !important;
+}
+
+/* Responsive adjustments for text style delete button */
+@media (max-width: 1100px) {
+  .text-style-delete-btn {
+    width: 22px !important;
+    height: 22px !important;
+    padding: 2px !important;
+  }
+
+  .text-style-delete-btn svg {
+    width: 14px !important;
+    height: 14px !important;
+    min-width: 14px !important;
+    min-height: 14px !important;
+    max-width: 14px !important;
+    max-height: 14px !important;
+  }
+}
+
+@media (max-width: 768px) {
+  .text-style-delete-btn {
+    width: 20px !important;
+    height: 20px !important;
+    padding: 2px !important;
+  }
+
+  .text-style-delete-btn svg {
+    width: 12px !important;
+    height: 12px !important;
+    min-width: 12px !important;
+    min-height: 12px !important;
+    max-width: 12px !important;
+    max-height: 12px !important;
+  }
+}
+
+/* Table Single Row Layout */
+.table-header-second-row {
+  display: flex;
+  gap: 0;
+  align-items: center;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  min-width: 0;
+  width: 100%;
+  justify-content: space-evenly;
+  height: 28px;
+}
+
+/* Ensure consistent height for all elements in table-header-second-row */
+.table-header-second-row .table-font-family-dropdown-wrapper .dropdown-trigger,
+.table-header-second-row .table-fontsize-input,
+.table-header-second-row .table-header-font-color-btn,
+.table-header-second-row .table-header-font-color-btn-inner,
+.table-header-second-row .table-header-color-icon,
+.table-header-second-row .table-header-bg-color-icon {
+  height: 28px;
+  display: flex;
+  align-items: center;
+}
+
+/* Table Input Styling with Curved Edges */
+.table-structure-input,
+.table-fontsize-input,
+.table-border-input {
+  border-radius: 6px !important;
+  border: 1px solid #d1d5db;
+  padding: 4px 6px;
+  font-size: 0.75rem;
+  transition: all 0.2s ease;
+  height: 28px;
+  box-sizing: border-box;
+}
+
+/* Table Structure Input - reduced width */
+.table-structure-input {
+  width: 60px !important;
+  min-width: 60px !important;
+  max-width: 60px !important;
+}
+
+/* FontSize input specific styling - smaller width and consistent height */
+.table-fontsize-input {
+  width: 38px !important;
+  min-width: 38px !important;
+  max-width: 38px !important;
+  height: 28px !important;
+  padding: 4px 2px !important;
+  text-align: center;
+  font-size: 0.75rem;
+}
+
+/* Border input specific styling - consistent height */
+.table-border-input {
+  height: 28px !important;
+  width: 38px !important;
+  min-width: 38px !important;
+  max-width: 38px !important;
+  padding: 4px 2px !important;
+}
+
+.table-structure-input:focus,
+.table-fontsize-input:focus,
+.table-border-input:focus {
+  outline: none;
+  border-color: #111827;
+  box-shadow: 0 0 0 3px rgba(0, 0, 0, 0.1);
+}
+
+/* Table Font Family Dropdown Wrapper */
+.table-font-family-dropdown-wrapper {
+  flex-shrink: 0;
+}
+
+.table-font-family-dropdown-wrapper .dropdown-trigger {
+  border-radius: 6px;
+  transition: all 0.2s ease;
+  width: 85px !important;
+  min-width: 85px !important;
+  max-width: 85px !important;
+  height: 28px;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.table-font-family-dropdown-wrapper .dropdown-trigger:hover {
+  border-color: #111827;
+  background-color: #f9fafb;
+}
+
+/* Ensure dropdown items have black highlighter on hover (same as toolbar) */
+.table-font-family-dropdown-wrapper .dropdown-item:hover {
+  background-color: #000000 !important;
+  color: white !important;
+}
+
+/* Border Label Styling */
+.table-border-label {
+  font-weight: 500;
+  color: #374151;
+  display: flex;
+  align-items: center;
+}
+
+/* Reduce width of color buttons in table formatting */
+.table-header-font-color-btn {
+  flex-shrink: 0;
+  width: 28px !important;
+  height: 28px !important;
+  min-width: 28px !important;
+  max-width: 28px !important;
+}
+
+.table-header-font-color-btn-inner {
+  width: 28px !important;
+  height: 28px !important;
+  min-width: 28px !important;
+  max-width: 28px !important;
+  padding: 2px 3px !important;
+}
+
+.table-header-font-color-btn__label {
+  font-size: 11px !important;
+}
+
+.table-header-font-color-btn__swatch {
+  height: 4px !important;
+}
+
+.table-header-color-icon {
+  flex-shrink: 0;
+  width: 28px !important;
+  height: 28px !important;
+  min-width: 28px !important;
+  max-width: 28px !important;
+}
+
+.table-header-color-icon>div {
+  width: 28px !important;
+  height: 28px !important;
+}
+
+.table-header-bg-color-icon {
+  width: 28px !important;
+  height: 28px !important;
+  min-width: 28px !important;
+  max-width: 28px !important;
+}
+
+.table-header-bg-color-icon svg {
+  width: 16px !important;
+  height: 16px !important;
+}
+
+/* Responsive adjustments for table formatting row */
+@media (max-width: 1200px) {
+  .table-header-second-row {
+    gap: 4px;
+  }
+
+  .table-font-family-dropdown-wrapper .dropdown-trigger {
+    width: 85px !important;
+    min-width: 85px !important;
+    max-width: 85px !important;
+    padding: 0.3rem 0.5rem;
+    font-size: 0.75rem;
+  }
+
+  .table-fontsize-input {
+    width: 35px !important;
+    min-width: 35px !important;
+    max-width: 35px !important;
+  }
+}
+
+@media (max-width: 1100px) {
+  .table-header-second-row {
+    gap: 3px;
+  }
+
+  .table-font-family-dropdown-wrapper .dropdown-trigger {
+    width: 80px !important;
+    min-width: 80px !important;
+    max-width: 80px !important;
+    padding: 0.3rem 0.45rem;
+    font-size: 0.7rem;
+  }
+
+  .table-fontsize-input {
+    width: 32px !important;
+    min-width: 32px !important;
+    max-width: 32px !important;
+    padding: 6px 2px !important;
+  }
+
+  .table-header-font-color-btn-inner {
+    width: 26px !important;
+    height: 26px !important;
+    min-width: 26px !important;
+  }
+
+  .table-header-bg-color-icon {
+    width: 26px !important;
+    height: 26px !important;
+    min-width: 26px !important;
+  }
+
+  .table-header-bg-color-icon svg {
+    width: 16px;
+    height: 16px;
+  }
+}
