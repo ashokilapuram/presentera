@@ -1,6 +1,13 @@
 # Deployment Guide
 
-This guide will help you deploy the Presentera fullstack application with the frontend on Vercel and backend on Render.
+This guide will help you deploy the Presentera fullstack application. You have two options:
+
+1. **Option A:** Frontend on Vercel + Backend on Render (Recommended for best performance)
+2. **Option B:** Both Frontend and Backend on Render (Simpler, one platform)
+
+**For deploying both on Render, see [DEPLOYMENT_RENDER_ONLY.md](./DEPLOYMENT_RENDER_ONLY.md)**
+
+This guide covers **Option A** (Vercel + Render).
 
 ## Table of Contents
 1. [Prerequisites](#prerequisites)
@@ -71,46 +78,57 @@ Make sure your `.gitignore` file is in place to exclude:
 
 ---
 
-## Frontend Deployment (Vercel)
+## Frontend Deployment (Vercel) - Recommended ✅
+
+Vercel is optimized for React apps with faster builds, better performance, and automatic SPA routing.
 
 ### Step 1: Prepare for Deployment
 
-1. Ensure your `vercel.json` is configured correctly (already present in the project)
-2. The build command is already set in `package.json`: `npm run build`
-3. The output directory is `build` (configured in `vercel.json`)
+1. ✅ `vercel.json` is already configured correctly
+2. ✅ Build command: `npm run build` (in `package.json`)
+3. ✅ Output directory: `build` (configured in `vercel.json`)
+4. ✅ SPA routing: Already configured in `vercel.json` - routes like `/app` will work automatically!
 
 ### Step 2: Deploy via Vercel Dashboard
 
 1. **Go to [Vercel Dashboard](https://vercel.com/dashboard)**
 2. **Click "Add New Project"**
 3. **Import your GitHub repository**
-   - Select the repository you just created
+   - Select the repository
    - Vercel will auto-detect it's a React app
 4. **Configure Project Settings:**
-   - **Framework Preset:** Create React App
-   - **Root Directory:** `frontend`
-   - **Build Command:** `npm run build` (or leave default)
-   - **Output Directory:** `build`
-   - **Install Command:** `npm install`
+   - **Framework Preset:** Create React App (auto-detected)
+   - **Root Directory:** `frontend` ⚠️ **Important!**
+   - **Build Command:** `npm run build` (auto-detected)
+   - **Output Directory:** `build` (auto-detected)
+   - **Install Command:** `npm install` (auto-detected)
 
 5. **Add Environment Variables:**
    - Click "Environment Variables"
    - Add: `REACT_APP_BACKEND_URL` = `https://your-backend.onrender.com`
-     - **Important:** You'll need to update this after deploying the backend
+     - **Note:** Update this after deploying the backend
    - Select all environments (Production, Preview, Development)
 
 6. **Deploy:**
    - Click "Deploy"
-   - Wait for the build to complete
+   - Wait for build (~2-3 minutes)
    - Your frontend will be live at `https://your-app.vercel.app`
 
-### Step 3: Update Environment Variable After Backend Deployment
+### Step 3: Verify Routes Work
+
+After deployment, test:
+- ✅ Landing page: `https://your-app.vercel.app/`
+- ✅ Editor: `https://your-app.vercel.app/app` (should work perfectly!)
+- ✅ Page refresh on `/app` works correctly
+
+**Vercel automatically handles SPA routing - no additional configuration needed!**
+
+### Step 4: Update Environment Variable After Backend Deployment
 
 Once your backend is deployed on Render:
-1. Go to your Vercel project settings
-2. Navigate to "Environment Variables"
-3. Update `REACT_APP_BACKEND_URL` with your Render backend URL
-4. Redeploy the frontend (or wait for automatic redeploy)
+1. Go to Vercel project → Settings → Environment Variables
+2. Update `REACT_APP_BACKEND_URL` with your Render backend URL
+3. Redeploy (or wait for auto-redeploy)
 
 ### Alternative: Deploy via Vercel CLI
 
@@ -121,24 +139,18 @@ npm i -g vercel
 # Navigate to frontend directory
 cd frontend
 
-# Login to Vercel
+# Login
 vercel login
 
 # Deploy
 vercel
 
-# Follow the prompts:
-# - Set up and deploy? Yes
-# - Which scope? (select your account)
-# - Link to existing project? No
-# - Project name? (enter a name or press enter)
-# - Directory? ./frontend
-# - Override settings? No
-
 # Add environment variable
 vercel env add REACT_APP_BACKEND_URL
-# Enter the backend URL when prompted
+# Enter backend URL when prompted
 ```
+
+**For detailed Vercel deployment guide, see [VERCEL_DEPLOYMENT.md](./VERCEL_DEPLOYMENT.md)**
 
 ---
 
@@ -179,27 +191,18 @@ vercel env add REACT_APP_BACKEND_URL
 
 ### Step 3: Update Backend CORS (Recommended)
 
-For better security, update the backend to only allow your frontend domain:
+For better security, restrict CORS to your Vercel frontend:
 
-1. Edit `backend/main.py`
-2. Update the CORS middleware to use environment variable:
+1. **Backend code is already configured** - `backend/main.py` supports `CORS_ORIGINS` environment variable
 
-```python
-import os
+2. **In Render dashboard:**
+   - Go to your backend service → Environment
+   - Add environment variable:
+     - **Key:** `CORS_ORIGINS`
+     - **Value:** `https://your-app.vercel.app` (your Vercel frontend URL)
+   - Service will auto-restart
 
-# Enable CORS
-allowed_origins = os.getenv("CORS_ORIGINS", "*").split(",")
-app.add_middleware(
-    CORSMiddleware,
-    allow_origins=allowed_origins,
-    allow_credentials=True,
-    allow_methods=["*"],
-    allow_headers=["*"],
-)
-```
-
-3. In Render dashboard, add environment variable:
-   - `CORS_ORIGINS` = `https://your-frontend.vercel.app`
+**This restricts CORS to only your Vercel frontend for better security.**
 
 ---
 

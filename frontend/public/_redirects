@@ -1,5 +1,0 @@
-# Render Static Site SPA Routing
-# This ensures all routes serve index.html for React Router (BrowserRouter)
-# Format: source destination status_code
-
-/*    /index.html   200

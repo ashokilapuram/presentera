@@ -517,6 +517,11 @@ function EditorApp() {
 
       // Determine backend URL (use environment variable or default to localhost)
       const backendUrl = process.env.REACT_APP_BACKEND_URL || 'http://localhost:8000';
+      
+      // Debug logging (remove in production if needed)
+      console.log('Backend URL:', backendUrl);
+      console.log('Full request URL:', `${backendUrl}/convert`);
+      
       const response = await fetch(`${backendUrl}/convert`, {
         method: 'POST',
         body: formData,
@@ -533,6 +538,15 @@ function EditorApp() {
           // If parsing fails, use status text
           errorMessage = response.statusText || errorMessage;
         }
+        
+        // More detailed error logging
+        console.error('Upload failed:', {
+          status: response.status,
+          statusText: response.statusText,
+          url: `${backendUrl}/convert`,
+          errorMessage
+        });
+        
         throw new Error(errorMessage);
       }
 

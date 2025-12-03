@@ -2,6 +2,14 @@
 
 Get your Presentera app deployed in minutes!
 
+## 🚀 Recommended Setup: Vercel (Frontend) + Render (Backend)
+
+This is the recommended deployment setup:
+- **Frontend on Vercel** - Best performance, faster builds, optimized for React
+- **Backend on Render** - Reliable Python hosting
+
+**Alternative:** Both on Render → See [DEPLOYMENT_RENDER_ONLY.md](./DEPLOYMENT_RENDER_ONLY.md)
+
 ## 🚀 5-Minute Deployment
 
 ### Step 1: Git Setup (2 minutes)
@@ -56,13 +64,18 @@ git push -u origin main
 ## ✅ Done!
 
 Your app is now live:
-- **Frontend:** `https://your-app.vercel.app`
-- **Backend:** `https://your-backend.onrender.com`
+- **Frontend:** `https://your-app.vercel.app` (Vercel - optimized for React)
+- **Backend:** `https://your-backend.onrender.com` (Render)
 - **API Docs:** `https://your-backend.onrender.com/docs`
+
+**Routes work perfectly:**
+- Landing page: `https://your-app.vercel.app/`
+- Editor: `https://your-app.vercel.app/app`
 
 ## 📚 Need More Details?
 
-- **Full Deployment Guide:** [DEPLOYMENT.md](./DEPLOYMENT.md)
+- **Full Deployment Guide (Vercel + Render):** [DEPLOYMENT.md](./DEPLOYMENT.md)
+- **Deploy Both on Render:** [DEPLOYMENT_RENDER_ONLY.md](./DEPLOYMENT_RENDER_ONLY.md)
 - **Environment Variables:** [ENVIRONMENT_VARIABLES.md](./ENVIRONMENT_VARIABLES.md)
 - **Git Setup:** [GIT_SETUP.md](./GIT_SETUP.md)
 

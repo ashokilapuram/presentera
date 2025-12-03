@@ -49,18 +49,9 @@ This tells Render to serve `index.html` for all routes.
 
 ## Deployment Platforms
 
-### Render Static Sites
+### Vercel (Recommended) ✅
 
-✅ **Automatically configured** - The `_redirects` file and `render.yaml` routes ensure proper routing.
-
-**Manual Configuration (if needed):**
-1. Go to your Static Site in Render dashboard
-2. Navigate to Settings → Headers
-3. Ensure rewrite rules are configured (usually automatic)
-
-### Vercel
-
-✅ **Automatically configured** - Vercel's `vercel.json` handles SPA routing:
+✅ **Automatically configured** - Vercel's `vercel.json` handles SPA routing perfectly:
 ```json
 {
   "routes": [
@@ -71,6 +62,19 @@ This tells Render to serve `index.html` for all routes.
   ]
 }
 ```
+
+**No additional configuration needed!** Vercel automatically:
+- Serves `index.html` for all routes
+- Handles React Router (BrowserRouter) perfectly
+- Works with direct URLs, page refresh, and browser navigation
+
+### Render Static Sites (Alternative)
+
+If deploying on Render, you would need:
+- `_redirects` file in `public/` folder
+- Routes configuration in `render.yaml`
+
+**But we recommend Vercel for the frontend** - it's optimized for React apps.
 
 ## Testing Routes
 
@@ -123,9 +127,8 @@ After deployment, test these scenarios:
 ## Current Configuration
 
 ✅ `BrowserRouter` is used in `App.js`  
-✅ `_redirects` file is in `frontend/public/`  
-✅ `render.yaml` has routes configuration  
-✅ `vercel.json` has routes configuration  
+✅ `vercel.json` has routes configuration (for Vercel deployment)  
+✅ Ready for Vercel deployment - routing works automatically!  
 
 ## Verification Checklist
 

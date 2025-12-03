@@ -209,10 +209,17 @@ CORS_ORIGINS=http://localhost:3000
 
 ## Quick Reference
 
-### Frontend (Vercel)
+### Frontend (Vercel) - Recommended ✅
 ```bash
 REACT_APP_BACKEND_URL=https://your-backend.onrender.com
 ```
+
+**Why Vercel for Frontend?**
+- ✅ Faster builds and deployments
+- ✅ Optimized for React apps
+- ✅ Automatic SPA routing (no configuration needed)
+- ✅ Global CDN for best performance
+- ✅ Free tier with great features
 
 ### Backend (Render)
 ```bash

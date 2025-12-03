@@ -77,11 +77,15 @@ See [ENVIRONMENT_VARIABLES.md](./ENVIRONMENT_VARIABLES.md) for detailed informat
 
 ## 📦 Deployment
 
-This project is designed to be deployed with:
-- **Frontend:** Vercel
-- **Backend:** Render
+### Recommended Setup: Vercel + Render
 
-See [DEPLOYMENT.md](./DEPLOYMENT.md) for complete deployment instructions.
+- **Frontend:** Vercel (optimized for React, faster builds, better performance)
+- **Backend:** Render (reliable Python hosting)
+
+**Deployment Guides:**
+- [DEPLOYMENT.md](./DEPLOYMENT.md) - Complete Vercel + Render setup guide
+- [QUICK_START.md](./QUICK_START.md) - 5-minute quick deployment
+- [DEPLOYMENT_RENDER_ONLY.md](./DEPLOYMENT_RENDER_ONLY.md) - Alternative: Both on Render
 
 ### Quick Deployment Steps
 
