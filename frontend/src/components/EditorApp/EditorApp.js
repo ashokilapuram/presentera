@@ -516,7 +516,9 @@ function EditorApp() {
       formData.append('file', file);
 
       // Determine backend URL (use environment variable or default to localhost)
-      const backendUrl = process.env.REACT_APP_BACKEND_URL || 'http://localhost:8000';
+      // Remove trailing slash if present to avoid double slashes
+      let backendUrl = process.env.REACT_APP_BACKEND_URL || 'http://localhost:8000';
+      backendUrl = backendUrl.replace(/\/+$/, ''); // Remove trailing slashes
       
       // Debug logging (remove in production if needed)
       console.log('Backend URL:', backendUrl);
